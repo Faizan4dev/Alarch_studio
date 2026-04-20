@@ -42,24 +42,33 @@ function FooterSection() {
       </div>
 
       {/* 🔥 FOOTER */}
+
       <div className="bg-black text-white py-16">
 
         <div className="max-w-7xl mx-auto px-6 md:px-12">
 
-          <div className="flex flex-col md:flex-row justify-between gap-10">
+          <div className="flex flex-col md:flex-row justify-between items-start gap-10">
 
             {/* LEFT - CONTACT */}
             <div>
               <h3 className="italic font-serif text-lg mb-4">Contact us</h3>
-              <p className="text-sm text-gray-400">123 Maple Street, Springfield</p>
-              <p className="text-sm text-gray-400 mt-2">+44 7378 261 462</p>
-              <p className="text-sm text-gray-400 mt-2">alarach@studio.co</p>
+              <div className="space-y-2">
+                <p className="text-sm text-gray-400 flex items-center gap-2">
+                  <i className="fa-solid fa-location-dot w-4"></i> 123 Maple Street, Springfield
+                </p>
+                <p className="text-sm text-gray-400 flex items-center gap-2">
+                  <i className="fa-solid fa-phone w-4"></i> +44 7378 261 462
+                </p>
+                <p className="text-sm text-gray-400 flex items-center gap-2">
+                  <i className="fa-solid fa-envelope w-4"></i> alarach@studio.co
+                </p>
+              </div>
             </div>
 
             {/* CENTER */}
-            <div className="text-center">
+           <div className="flex flex-col items-center justify-center text-center w-full">
               <h2 className="text-xl font-semibold mb-4">Alarach Studio</h2>
-              <div className="flex gap-6 justify-center text-sm text-gray-400">
+              <div className="flex gap-6 text-sm text-gray-400">
                 <a href="#">Home</a>
                 <a href="#">Projects</a>
                 <a href="#">About Us</a>
@@ -68,12 +77,18 @@ function FooterSection() {
             </div>
 
             {/* RIGHT - SOCIAL */}
-            <div className="text-left md:text-right">
+            <div>
               <h3 className="italic font-serif text-lg mb-4">Social links</h3>
               <div className="text-sm text-gray-400 space-y-2">
-                <p>Instagram</p>
-                <p>LinkedIn</p>
-                <p>Twitter</p>
+                <p className="flex items-center gap-2">
+                  <i className="fa-brands fa-instagram w-4"></i> Instagram
+                </p>
+                <p className="flex items-center gap-2">
+                  <i className="fa-brands fa-linkedin w-4"></i> LinkedIn
+                </p>
+                <p className="flex items-center gap-2">
+                  <i className="fa-brands fa-twitter w-4"></i> Twitter
+                </p>
               </div>
             </div>
 

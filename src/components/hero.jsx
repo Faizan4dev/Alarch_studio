@@ -40,9 +40,9 @@ function Hero() {
                 
                 {/* LEFT */}
                 <div className="md:w-[58%]">
-                <h1 className="text-4xl md:text-[60px] italic font-serif leading-[1.05] tracking-tight">
+                  <h1 className="text-[80px] italic font-[500] leading-[100px] tracking-tight text-black font-['Cormorant_Garamond']">
                     Spaces That Tell Your Story
-                </h1>
+                  </h1>
                 </div>
 
                 {/* RIGHT */}
