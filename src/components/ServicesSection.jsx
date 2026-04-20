@@ -1,5 +1,9 @@
-import img1 from "../assets/part2.jpeg";
-import img2 from "../assets/hero.jpeg";
+import Simg1 from "../assets/Simg1.jpeg";
+import Simg2 from "../assets/Simg2.jpeg";
+import Simg3 from "../assets/Simg3.jpeg";
+import Simg4 from "../assets/Simg4.jpeg";
+import Simg5 from "../assets/Simg5.jpeg";
+import Simg6 from "../assets/Simg6.jpeg";
 
 function ServicesSection() {
   return (
@@ -22,7 +26,7 @@ function ServicesSection() {
 
           {/* CARD 1 - text bottom, img top */}
           <div className="bg-white border border-gray-300 rounded-2xl p-4 shadow-sm w-full flex flex-col">
-            <img src={img1} className="w-full h-[260px] object-cover rounded-xl flex-shrink-0" />
+            <img src={Simg1} className="w-full h-[260px] object-cover rounded-xl flex-shrink-0" />
             <div className="mt-4">
               <h3 className="text-4xl font-semibold italic font-serif text-base leading-tight">Interior Designing</h3>
               <p className="text-sm text-gray-900 mt-3">
@@ -39,12 +43,12 @@ function ServicesSection() {
                 Exteriors shaped for strong presence and harmony. We focus on proportion, materials, and clean aesthetics.
               </p>
             </div>
-            <img src={img2} className="w-full h-[260px] object-cover rounded-xl flex-shrink-0" />
+            <img src={Simg2} className="w-full h-[260px] object-cover rounded-xl flex-shrink-0" />
           </div>
 
           {/* CARD 3 - text bottom, img top */}
           <div className="bg-white border border-gray-300 rounded-2xl p-4 shadow-sm w-full flex flex-col">
-            <img src={img1} className="w-full h-[260px] object-cover rounded-xl flex-shrink-0" />
+            <img src={Simg3} className="w-full h-[260px] object-cover rounded-xl flex-shrink-0" />
             <div className="mt-4">
               <h3 className="text-4xl font-semibold italic font-serif text-base leading-tight">Interior Layouts</h3>
               <p className="text-sm text-gray-900 mt-3">
@@ -61,12 +65,12 @@ function ServicesSection() {
                 Realistic visuals that bring your space to life early, helping you make clear, confident decisions.
               </p>
             </div>
-            <img src={img2} className="w-full h-[260px] object-cover rounded-xl flex-shrink-0" />
+            <img src={Simg4} className="w-full h-[260px] object-cover rounded-xl flex-shrink-0" />
           </div>
 
           {/* CARD 5 - text bottom, img top */}
           <div className="bg-white border border-gray-300 rounded-2xl p-4 shadow-sm w-full flex flex-col">
-            <img src={img1} className="w-full h-[260px] object-cover rounded-xl flex-shrink-0" />
+            <img src={Simg5} className="w-full h-[260px] object-cover rounded-xl flex-shrink-0" />
             <div className="mt-4">
               <h3 className="text-4xl font-semibold italic font-serif text-base leading-tight">Material & Finish Selection</h3>
               <p className="text-sm text-gray-900 mt-3">
@@ -77,7 +81,7 @@ function ServicesSection() {
 
           {/* CARD 6 - text bottom, img top */}
           <div className="bg-white border border-gray-300 rounded-2xl p-4 shadow-sm w-full flex flex-col">
-            <img src={img2} className="w-full h-[260px] object-cover rounded-xl flex-shrink-0" />
+            <img src={Simg6} className="w-full h-[260px] object-cover rounded-xl flex-shrink-0" />
             <div className="mt-4">
               <h3 className="text-4xl font-semibold italic font-serif text-base leading-tight">Lighting Design</h3>
               <p className="text-sm text-gray-900 mt-3">

@@ -1,5 +1,5 @@
-import img1 from "../assets/part2.jpeg";
-import img2 from "../assets/hero.jpeg";
+import img1 from "../assets/img1.jpeg";
+import img2 from "../assets/img2.jpeg";
 
 function AboutSection() {
   return (

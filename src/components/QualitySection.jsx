@@ -1,5 +1,9 @@
-import img1 from "../assets/part2.jpeg";
-import img2 from "../assets/hero.jpeg";
+import img1 from "../assets/img1.jpeg";
+import img2 from "../assets/img2.jpeg";
+import why from "../assets/why.jpeg";
+import img3 from "../assets/img3.jpeg";
+import img4 from "../assets/img4.jpeg";
+import img5 from "../assets/img1.jpeg";
 
 function QualitySection() {
   return (
@@ -41,7 +45,7 @@ function QualitySection() {
 
           {/* CARD 3 */}
           <div className="relative rounded-2xl overflow-hidden group">
-            <img src={img1} className="w-full h-[260px] md:h-[280px] object-cover" />
+            <img src={why} className="w-full h-[260px] md:h-[280px] object-cover" />
             <div className="absolute inset-0 bg-black/30 flex flex-col justify-end p-5">
               <h3 className="text-white text-lg font-serif italic">Modern Kitchen Studio</h3>
               <p className="text-xs text-gray-200">Commercial · Karachi</p>
@@ -50,7 +54,7 @@ function QualitySection() {
 
           {/* CARD 4 */}
           <div className="relative rounded-2xl overflow-hidden group">
-            <img src={img2} className="w-full h-[260px] md:h-[280px] object-cover" />
+            <img src={img3} className="w-full h-[260px] md:h-[280px] object-cover" />
             <div className="absolute inset-0 bg-black/30 flex flex-col justify-end p-5">
               <h3 className="text-white text-lg font-serif italic">Executive Office Suite</h3>
               <p className="text-xs text-gray-200">Commercial · Islamabad</p>
@@ -59,7 +63,7 @@ function QualitySection() {
 
           {/* CARD 5 */}
           <div className="relative rounded-2xl overflow-hidden group">
-            <img src={img1} className="w-full h-[260px] md:h-[280px] object-cover" />
+            <img src={img4} className="w-full h-[260px] md:h-[280px] object-cover" />
             <div className="absolute inset-0 bg-black/30 flex flex-col justify-end p-5">
               <h3 className="text-white text-lg font-serif italic">Luxury Bath Sanctuary</h3>
               <p className="text-xs text-gray-200">Residential · Bahria Town</p>
@@ -68,7 +72,7 @@ function QualitySection() {
 
           {/* CARD 6 */}
           <div className="relative rounded-2xl overflow-hidden group">
-            <img src={img2} className="w-full h-[260px] md:h-[280px] object-cover" />
+            <img src={img5} className="w-full h-[260px] md:h-[280px] object-cover" />
             <div className="absolute inset-0 bg-black/30 flex flex-col justify-end p-5">
               <h3 className="text-white text-lg font-serif italic">Rooftop Lounge Area</h3>
               <p className="text-xs text-gray-200">Commercial · DHA Karachi</p>

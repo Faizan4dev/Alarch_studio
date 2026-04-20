@@ -1,4 +1,4 @@
-import whyImg from "../assets/part2.jpeg"; // use correct image later
+import whyImg from "../assets/why.jpeg"; // use correct image later
 
 function WhySection() {
   return (
@@ -12,7 +12,7 @@ function WhySection() {
           <div className="md:w-[45%]">
 
             <h2 className="text-4xl md:text-[56px] italic font-serif leading-tight">
-              Why Alarc Studio
+              Why Alarch Studio
             </h2>
 
             <div className="mt-6 space-y-5 text-sm text-gray-600 leading-relaxed max-w-md">

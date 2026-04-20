@@ -1,3 +1,10 @@
+import prsn6 from "../assets/prsn6.jpeg";
+import prsn7 from "../assets/prsn7.jpeg";
+import prsn8 from "../assets/prsn8.jpeg";
+
+import flagSK from "../assets/slovakia.jpeg";
+import flagUS from "../assets/usa.jpeg";
+
 function TestimonialSection() {
   return (
     <div className="bg-[#fff] py-24">
@@ -13,11 +20,11 @@ function TestimonialSection() {
         <div className="mt-16 flex flex-col md:flex-row items-center justify-between gap-10">
 
           {/* LEFT ARROW */}
-          <button className="w-10 h-10 border rounded-full flex items-center justify-center">
+          <button className="w-10 h-10 border rounded-full flex items-center justify-center hover:bg-black hover:text-white transition">
             ←
           </button>
 
-          {/* TESTIMONIAL CARD */}
+          {/* TESTIMONIAL CARDS */}
           <div className="flex flex-col md:flex-row gap-10 text-center md:text-left">
 
             {/* CARD 1 */}
@@ -27,9 +34,18 @@ function TestimonialSection() {
               </p>
 
               <div className="mt-6 flex flex-col items-center">
-                <div className="w-10 h-10 rounded-full bg-gray-300"></div>
+                <img
+                  src={prsn6}
+                  alt="client"
+                  className="w-10 h-10 rounded-full object-cover border border-gray-200"
+                />
                 <p className="mt-3 font-serif italic">Dreamattic</p>
-                <p className="text-xs text-gray-500">Slovakia</p>
+
+                {/* FLAG + COUNTRY */}
+                <div className="flex items-center gap-2 mt-1">
+                  <img src={flagSK} alt="Slovakia" className="w-5 h-3 object-cover rounded-sm" />
+                  <p className="text-xs text-gray-500">Slovakia</p>
+                </div>
               </div>
             </div>
 
@@ -40,9 +56,18 @@ function TestimonialSection() {
               </p>
 
               <div className="mt-6 flex flex-col items-center">
-                <div className="w-10 h-10 rounded-full bg-gray-300"></div>
+                <img
+                  src={prsn7}
+                  alt="client"
+                  className="w-10 h-10 rounded-full object-cover border border-gray-200"
+                />
                 <p className="mt-3 font-serif italic">Roger Francis</p>
-                <p className="text-xs text-gray-500">United States</p>
+
+                {/* FLAG + COUNTRY */}
+                <div className="flex items-center gap-2 mt-1">
+                  <img src={flagUS} alt="USA" className="w-5 h-3 object-cover rounded-sm" />
+                  <p className="text-xs text-gray-500">United States</p>
+                </div>
               </div>
             </div>
 
@@ -53,16 +78,25 @@ function TestimonialSection() {
               </p>
 
               <div className="mt-6 flex flex-col items-center">
-                <div className="w-10 h-10 rounded-full bg-gray-300"></div>
+                <img
+                  src={prsn8}
+                  alt="client"
+                  className="w-10 h-10 rounded-full object-cover border border-gray-200"
+                />
                 <p className="mt-3 font-serif italic">Dreamattic</p>
-                <p className="text-xs text-gray-500">Slovakia</p>
+
+                {/* FLAG + COUNTRY */}
+                <div className="flex items-center gap-2 mt-1">
+                  <img src={flagSK} alt="Slovakia" className="w-5 h-3 object-cover rounded-sm" />
+                  <p className="text-xs text-gray-500">Slovakia</p>
+                </div>
               </div>
             </div>
 
           </div>
 
           {/* RIGHT ARROW */}
-          <button className="w-10 h-10 border rounded-full flex items-center justify-center">
+          <button className="w-10 h-10 border rounded-full flex items-center justify-center hover:bg-black hover:text-white transition">
             →
           </button>
 

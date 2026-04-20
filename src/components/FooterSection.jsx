@@ -1,4 +1,5 @@
-import ctaImg from "../assets/part2.jpeg";
+import ctaImg from "../assets/foot.jpeg";
+import alarch from "../assets/alarch.png";
 
 function FooterSection() {
   return (
@@ -50,7 +51,7 @@ function FooterSection() {
           <div className="flex flex-col md:flex-row justify-between items-start gap-10">
 
             {/* LEFT - CONTACT */}
-            <div>
+            <div className="px-3">
               <h3 className="italic font-serif text-lg mb-4">Contact us</h3>
               <div className="space-y-2">
                 <p className="text-sm text-gray-400 flex items-center gap-2">
@@ -66,8 +67,8 @@ function FooterSection() {
             </div>
 
             {/* CENTER */}
-           <div className="flex flex-col items-center justify-center text-center w-full">
-              <h2 className="text-xl font-semibold mb-4">Alarach Studio</h2>
+            <div className="flex  flex-col items-center justify-center text-center w-full">
+              <img src={alarch} alt="logo Alarach Studio" className="h-10 object-contain mb-4 brightness-0 invert" />
               <div className="flex gap-6 text-sm text-gray-400">
                 <a href="#">Home</a>
                 <a href="#">Projects</a>
@@ -77,7 +78,7 @@ function FooterSection() {
             </div>
 
             {/* RIGHT - SOCIAL */}
-            <div>
+            <div className="px-3">
               <h3 className="italic font-serif text-lg mb-4">Social links</h3>
               <div className="text-sm text-gray-400 space-y-2">
                 <p className="flex items-center gap-2">
