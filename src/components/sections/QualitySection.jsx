@@ -27,7 +27,7 @@ function QualitySection() {
 
           {/* CARD 1 */}
           <div className="relative rounded-2xl overflow-hidden group">
-            <img src={img1} className="w-full h-[260px] md:h-[280px] object-cover" />
+            <img src={img1} className="w-full h-[260px] md:h-[280px] object-cover transition duration-500 group-hover:scale-105" />
             <div className="absolute inset-0 bg-black/30 flex flex-col justify-end p-5">
               <h3 className="text-white text-lg font-serif italic">Master Bedroom Retreat</h3>
               <p className="text-xs text-gray-200">Residential · DHA Lahore</p>
@@ -36,7 +36,7 @@ function QualitySection() {
 
           {/* CARD 2 */}
           <div className="relative rounded-2xl overflow-hidden group">
-            <img src={img2} className="w-full h-[260px] md:h-[280px] object-cover" />
+            <img src={img2} className="w-full h-[260px] md:h-[280px] object-cover transition duration-500 group-hover:scale-105" />
             <div className="absolute inset-0 bg-black/30 flex flex-col justify-end p-5">
               <h3 className="text-white text-lg font-serif italic">Living Room Design</h3>
               <p className="text-xs text-gray-200">Residential · Gulberg Lahore</p>
@@ -45,7 +45,7 @@ function QualitySection() {
 
           {/* CARD 3 */}
           <div className="relative rounded-2xl overflow-hidden group">
-            <img src={why} className="w-full h-[260px] md:h-[280px] object-cover" />
+            <img src={why} className="w-full h-[260px] md:h-[280px] object-cover transition duration-500 group-hover:scale-105" />
             <div className="absolute inset-0 bg-black/30 flex flex-col justify-end p-5">
               <h3 className="text-white text-lg font-serif italic">Modern Kitchen Studio</h3>
               <p className="text-xs text-gray-200">Commercial · Karachi</p>
@@ -54,7 +54,7 @@ function QualitySection() {
 
           {/* CARD 4 */}
           <div className="relative rounded-2xl overflow-hidden group">
-            <img src={img3} className="w-full h-[260px] md:h-[280px] object-cover" />
+            <img src={img3} className="w-full h-[260px] md:h-[280px] object-cover transition duration-500 group-hover:scale-105" />
             <div className="absolute inset-0 bg-black/30 flex flex-col justify-end p-5">
               <h3 className="text-white text-lg font-serif italic">Executive Office Suite</h3>
               <p className="text-xs text-gray-200">Commercial · Islamabad</p>
@@ -63,7 +63,7 @@ function QualitySection() {
 
           {/* CARD 5 */}
           <div className="relative rounded-2xl overflow-hidden group">
-            <img src={img4} className="w-full h-[260px] md:h-[280px] object-cover" />
+            <img src={img4} className="w-full h-[260px] md:h-[280px] object-cover transition duration-500 group-hover:scale-105" />
             <div className="absolute inset-0 bg-black/30 flex flex-col justify-end p-5">
               <h3 className="text-white text-lg font-serif italic">Luxury Bath Sanctuary</h3>
               <p className="text-xs text-gray-200">Residential · Bahria Town</p>
@@ -72,7 +72,7 @@ function QualitySection() {
 
           {/* CARD 6 */}
           <div className="relative rounded-2xl overflow-hidden group">
-            <img src={img5} className="w-full h-[260px] md:h-[280px] object-cover" />
+            <img src={img5} className="w-full h-[260px] md:h-[280px] object-cover transition duration-500 group-hover:scale-105" />
             <div className="absolute inset-0 bg-black/30 flex flex-col justify-end p-5">
               <h3 className="text-white text-lg font-serif italic">Rooftop Lounge Area</h3>
               <p className="text-xs text-gray-200">Commercial · DHA Karachi</p>
@@ -83,13 +83,16 @@ function QualitySection() {
 
         {/* 🔥 BUTTONS */}
         <div className="mt-12 flex justify-center gap-4">
-          <button className="bg-black text-white px-6 py-3 rounded-full text-sm">
+
+          {/* ✅ hover system */}
+          <button className="btn-primary">
             View All projects
           </button>
 
-          <button className="border border-black px-6 py-3 rounded-full text-sm">
+          <button className="btn-outline">
             Book a Consultation
           </button>
+
         </div>
 
       </div>

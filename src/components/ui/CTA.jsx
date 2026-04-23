@@ -6,9 +6,14 @@ function CTA({
   buttonText = "Book a Consultation",
 }) {
   return (
-    <div className="relative w-full h-[420px] md:h-[520px] overflow-hidden">
+    <div className="relative w-full h-[420px] md:h-[520px] overflow-hidden group">
       
-      <img src={ctaImg} alt="cta" className="w-full h-full object-cover" />
+      
+      <img
+        src={ctaImg}
+        alt="cta"
+        className="w-full h-full object-cover "
+      />
 
       <div className="absolute inset-0 bg-black/50"></div>
 
@@ -23,7 +28,8 @@ function CTA({
             {desc}
           </p>
 
-          <button className="mt-6 bg-white text-black px-6 py-3 rounded-full text-sm font-medium">
+          {/* ✅ white button hover (custom, not btn-primary) */}
+          <button className="mt-6 bg-white text-black px-6 py-3 rounded-full text-sm font-medium transition duration-200 hover:bg-gray-200 active:scale-95">
             {buttonText}
           </button>
 

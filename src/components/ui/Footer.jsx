@@ -6,56 +6,76 @@ function Footer() {
 
       <div className="max-w-7xl mx-auto px-6 md:px-12">
 
-        <div className="flex flex-col md:flex-row justify-between items-start gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 items-start">
 
           {/* LEFT */}
-          <div>
+          <div className="md:justify-self-start">
             <h3 className="italic font-serif text-lg mb-4">Contact us</h3>
-            <div className="space-y-2 text-sm text-gray-400">
-              <p className="flex items-center gap-2">
-                <i className="fa-solid fa-location-dot w-4"></i>
-                123 Maple Street, Springfield
-              </p>
-              <p className="flex items-center gap-2">
-                <i className="fa-solid fa-phone w-4"></i>
-                +44 7378 261 462
-              </p>
-              <p className="flex items-center gap-2">
-                <i className="fa-solid fa-envelope w-4"></i>
-                alarach@studio.co
-              </p>
+
+            <div className="space-y-3 text-sm text-gray-400">
+
+              <div className="flex items-center gap-3">
+                <i className="fa-solid fa-location-dot text-base"></i>
+                <span>123 Maple Street, Springfield</span>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <i className="fa-solid fa-phone text-base"></i>
+                <span>+44 7378 261 462</span>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <i className="fa-solid fa-envelope text-base"></i>
+                <span>alarach@studio.co</span>
+              </div>
+
             </div>
           </div>
 
           {/* CENTER */}
-          <div className="flex flex-col items-center text-center w-full">
+          <div className="flex flex-col items-center text-center md:justify-self-center">
             <img
               src={alarch}
-              className="h-10 mb-4 brightness-0 invert"
+              className="h-10 mb-5 brightness-0 invert"
               alt="logo"
             />
 
-            <div className="flex gap-6 text-sm text-gray-400">
-              <a href="#">Home</a>
-              <a href="#">Projects</a>
-              <a href="#">About Us</a>
-              <a href="#">Contact Us</a>
+            <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-400">
+              <a href="#" className="hover:text-white transition">Home</a>
+              <a href="#" className="hover:text-white transition">Projects</a>
+              <a href="#" className="hover:text-white transition">About Us</a>
+              <a href="#" className="hover:text-white transition">Contact Us</a>
             </div>
           </div>
 
           {/* RIGHT */}
-          <div>
+          <div className="md:justify-self-end text-left md:pr-2">
             <h3 className="italic font-serif text-lg mb-4">Social links</h3>
-            <div className="text-sm text-gray-400 space-y-2">
-              <p><i className="fa-brands fa-instagram mr-2"></i>Instagram</p>
-              <p><i className="fa-brands fa-linkedin mr-2"></i>LinkedIn</p>
-              <p><i className="fa-brands fa-twitter mr-2"></i>Twitter</p>
+
+            <div className="space-y-3 text-sm text-gray-400">
+
+              <a href="#" className="flex items-center gap-3 hover:text-white transition">
+                <i className="fa-brands fa-instagram text-lg"></i>
+                Instagram
+              </a>
+
+              <a href="#" className="flex items-center gap-3 hover:text-white transition">
+                <i className="fa-brands fa-linkedin text-lg"></i>
+                LinkedIn
+              </a>
+
+              <a href="#" className="flex items-center gap-3 hover:text-white transition">
+                <i className="fa-brands fa-twitter text-lg"></i>
+                Twitter
+              </a>
+
             </div>
           </div>
 
         </div>
 
-        <div className="border-t border-gray-800 mt-10 pt-6 text-center text-sm text-gray-500">
+        {/* 🔥 FOOTER BOTTOM */}
+        <div className="border-t border-gray-800 mt-12 pt-6 text-center text-sm text-gray-500">
           © Alarach Studio Inc. All Rights Reserved.
         </div>
 

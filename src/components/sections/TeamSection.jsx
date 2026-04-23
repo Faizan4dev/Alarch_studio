@@ -65,7 +65,7 @@ function TeamSection() {
         {/* LEFT BUTTON */}
         <button
           onClick={() => scroll("left")}
-          className="absolute left-2 md:left-0 top-1/2 -translate-y-1/2 z-10 bg-white border rounded-full w-10 h-10 shadow hover:bg-black hover:text-white transition"
+          className="absolute left-2 md:left-0 top-1/2 -translate-y-1/2 z-10 bg-white border rounded-full w-10 h-10 shadow icon-hover"
         >
           ←
         </button>
@@ -73,7 +73,7 @@ function TeamSection() {
         {/* RIGHT BUTTON */}
         <button
           onClick={() => scroll("right")}
-          className="absolute right-2 md:right-0 top-1/2 -translate-y-1/2 z-10 bg-white border rounded-full w-10 h-10 shadow hover:bg-black hover:text-white transition"
+          className="absolute right-2 md:right-0 top-1/2 -translate-y-1/2 z-10 bg-white border rounded-full w-10 h-10 shadow icon-hover"
         >
           →
         </button>
@@ -86,34 +86,34 @@ function TeamSection() {
           {team.map((member, index) => (
             <div
               key={index}
-              className="min-w-[300px] bg-white rounded-xl overflow-hidden hover:shadow-lg transition"
+              className="min-w-[300px] bg-white rounded-xl overflow-hidden transition duration-300 hover:shadow-md"
             >
+
               {/* IMAGE */}
-              <img
-                src={member.img}
-                alt={member.name}
-                className="w-full h-[300px] object-cover"
-              />
+              <div className="overflow-hidden">
+                <img
+                  src={member.img}
+                  alt={member.name}
+                  className="w-full h-[300px] object-cover transition duration-500 hover:scale-105"
+                />
+              </div>
 
               {/* CONTENT */}
               <div className="p-5 text-left">
 
-                {/* NAME */}
                 <p className="text-[18px] font-medium">{member.name}</p>
 
-                {/* ROLE */}
                 <p className="text-sm text-gray-500">{member.role}</p>
 
-                {/* DESCRIPTION */}
                 <p className="text-sm text-gray-600 mt-3 leading-relaxed">
                   {member.desc}
                 </p>
 
                 {/* ICONS */}
-                <div className="flex gap-4 mt-4 text-lg">
-                  <i className="fa-brands fa-linkedin cursor-pointer hover:opacity-70"></i>
-                  <i className="fa-brands fa-x-twitter cursor-pointer hover:opacity-70"></i>
-                  <i className="fa-solid fa-globe cursor-pointer hover:opacity-70"></i>
+                <div className="flex gap-4 mt-4 text-lg text-gray-500">
+                  <i className="fa-brands fa-linkedin cursor-pointer hover:text-black transition"></i>
+                  <i className="fa-brands fa-x-twitter cursor-pointer hover:text-black transition"></i>
+                  <i className="fa-solid fa-globe cursor-pointer hover:text-black transition"></i>
                 </div>
 
               </div>

@@ -18,23 +18,25 @@ function ProjectsHero() {
             A curated collection of our work where imagination is translated into built form. Each project begins with a vision and is refined through thoughtful design, precise planning, and attention to every detail.
           </p>
 
-          <button className="mt-6 bg-black text-white px-6 py-3 rounded-full text-sm hover:opacity-90 transition">
+          {/* ✅ consistent button system */}
+          <button className="btn-primary mt-6">
             Book a Consultation
           </button>
 
         </div>
 
         {/* RIGHT IMAGE */}
-        <div className="md:w-[52%] relative">
+        <div className="md:w-[52%] relative group overflow-hidden">
 
-            {/* GRADIENT FADE */}
-            <div className="absolute left-0 top-0 h-full w-[42%] bg-gradient-to-r from-white via-white/80 via-white/40 to-transparent z-10 pointer-events-none"></div>
+          {/* ✅ smoother gradient */}
+          <div className="absolute left-0 top-0 h-full w-[45%] bg-gradient-to-r from-white via-white/70 via-white/30 to-transparent z-10 pointer-events-none"></div>
 
-            <img
-              src={heroGrid}
-              alt="projects"
-              className="w-full h-[440px] md:h-[540px] object-cover"
-            />
+          {/* ✅ subtle premium zoom */}
+          <img
+            src={heroGrid}
+            alt="projects"
+            className="w-full h-[440px] md:h-[540px] object-cover transition duration-700 ease-out group-hover:scale-[1.03]"
+          />
 
         </div>
 

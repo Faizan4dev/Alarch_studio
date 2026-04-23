@@ -24,9 +24,11 @@ function ServicesSection() {
         {/* 🔥 GRID */}
         <div className="mt-14 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
 
-          {/* CARD 1 - text bottom, img top */}
-          <div className="bg-white border border-gray-300 rounded-2xl p-4 shadow-sm w-full flex flex-col">
-            <img src={Simg1} className="w-full h-[260px] object-cover rounded-xl flex-shrink-0" />
+          {/* CARD 1 */}
+          <div className="bg-white border border-gray-300 rounded-2xl p-4 shadow-sm w-full flex flex-col card-hover">
+            <div className="overflow-hidden rounded-xl">
+              <img src={Simg1} className="w-full h-[260px] object-cover transition duration-500 hover:scale-105" />
+            </div>
             <div className="mt-4">
               <h3 className="text-4xl font-semibold italic font-serif text-base leading-tight">Interior Designing</h3>
               <p className="text-sm text-gray-900 mt-3">
@@ -35,20 +37,24 @@ function ServicesSection() {
             </div>
           </div>
 
-          {/* CARD 2 - text top, img bottom */}
-          <div className="bg-white border border-gray-300 rounded-2xl p-4 shadow-sm w-full flex flex-col">
+          {/* CARD 2 */}
+          <div className="bg-white border border-gray-300 rounded-2xl p-4 shadow-sm w-full flex flex-col card-hover">
             <div className="mb-4">
               <h3 className="text-4xl font-semibold italic font-serif text-base leading-tight">Exterior Designing</h3>
               <p className="text-sm text-gray-900 mt-3">
                 Exteriors shaped for strong presence and harmony. We focus on proportion, materials, and clean aesthetics.
               </p>
             </div>
-            <img src={Simg2} className="w-full h-[260px] object-cover rounded-xl flex-shrink-0" />
+            <div className="overflow-hidden rounded-xl">
+              <img src={Simg2} className="w-full h-[260px] object-cover transition duration-500 hover:scale-105" />
+            </div>
           </div>
 
-          {/* CARD 3 - text bottom, img top */}
-          <div className="bg-white border border-gray-300 rounded-2xl p-4 shadow-sm w-full flex flex-col">
-            <img src={Simg3} className="w-full h-[260px] object-cover rounded-xl flex-shrink-0" />
+          {/* CARD 3 */}
+          <div className="bg-white border border-gray-300 rounded-2xl p-4 shadow-sm w-full flex flex-col card-hover">
+            <div className="overflow-hidden rounded-xl">
+              <img src={Simg3} className="w-full h-[260px] object-cover transition duration-500 hover:scale-105" />
+            </div>
             <div className="mt-4">
               <h3 className="text-4xl font-semibold italic font-serif text-base leading-tight">Interior Layouts</h3>
               <p className="text-sm text-gray-900 mt-3">
@@ -57,20 +63,24 @@ function ServicesSection() {
             </div>
           </div>
 
-          {/* CARD 4 - text top, img bottom */}
-          <div className="bg-white border border-gray-300 rounded-2xl p-4 shadow-sm w-full flex flex-col">
+          {/* CARD 4 */}
+          <div className="bg-white border border-gray-300 rounded-2xl p-4 shadow-sm w-full flex flex-col card-hover">
             <div className="mb-4">
               <h3 className="text-4xl font-semibold italic font-serif text-base leading-tight">Arch Viz Animation</h3>
               <p className="text-sm text-gray-900 mt-3">
                 Realistic visuals that bring your space to life early, helping you make clear, confident decisions.
               </p>
             </div>
-            <img src={Simg4} className="w-full h-[260px] object-cover rounded-xl flex-shrink-0" />
+            <div className="overflow-hidden rounded-xl">
+              <img src={Simg4} className="w-full h-[260px] object-cover transition duration-500 hover:scale-105" />
+            </div>
           </div>
 
-          {/* CARD 5 - text bottom, img top */}
-          <div className="bg-white border border-gray-300 rounded-2xl p-4 shadow-sm w-full flex flex-col">
-            <img src={Simg5} className="w-full h-[260px] object-cover rounded-xl flex-shrink-0" />
+          {/* CARD 5 */}
+          <div className="bg-white border border-gray-300 rounded-2xl p-4 shadow-sm w-full flex flex-col card-hover">
+            <div className="overflow-hidden rounded-xl">
+              <img src={Simg5} className="w-full h-[260px] object-cover transition duration-500 hover:scale-105" />
+            </div>
             <div className="mt-4">
               <h3 className="text-4xl font-semibold italic font-serif text-base leading-tight">Material & Finish Selection</h3>
               <p className="text-sm text-gray-900 mt-3">
@@ -79,9 +89,11 @@ function ServicesSection() {
             </div>
           </div>
 
-          {/* CARD 6 - text bottom, img top */}
-          <div className="bg-white border border-gray-300 rounded-2xl p-4 shadow-sm w-full flex flex-col">
-            <img src={Simg6} className="w-full h-[260px] object-cover rounded-xl flex-shrink-0" />
+          {/* CARD 6 */}
+          <div className="bg-white border border-gray-300 rounded-2xl p-4 shadow-sm w-full flex flex-col card-hover">
+            <div className="overflow-hidden rounded-xl">
+              <img src={Simg6} className="w-full h-[260px] object-cover transition duration-500 hover:scale-105" />
+            </div>
             <div className="mt-4">
               <h3 className="text-4xl font-semibold italic font-serif text-base leading-tight">Lighting Design</h3>
               <p className="text-sm text-gray-900 mt-3">
@@ -94,12 +106,16 @@ function ServicesSection() {
 
         {/* 🔥 BUTTONS */}
         <div className="mt-12 flex justify-center gap-4">
-          <button className="bg-black text-white px-6 py-3 rounded-full text-sm">
+
+          {/* ✅ hover system */}
+          <button className="btn-primary">
             Book a Consultation
           </button>
-          <button className="border border-black px-6 py-3 rounded-full text-sm">
+
+          <button className="btn-outline">
             View Projects
           </button>
+
         </div>
 
       </div>

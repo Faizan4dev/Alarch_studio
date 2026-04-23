@@ -25,39 +25,39 @@ function ProjectsGrid() {
         {/* GRID */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 
-          {/* CARD 1 (WITH OVERLAY) */}
-          <div className="relative rounded-2xl overflow-hidden">
-            <img src={img1} className="w-full h-[260px] object-cover" />
+          {/* CARD */}
+          {[img1, img2, img3, img4, img5, img6].map((img, i) => (
+            <div key={i} className="relative rounded-2xl overflow-hidden group">
 
-            <div className="absolute inset-0 bg-black/30 flex items-end p-4">
-              <div className="text-white">
-                <p className="text-sm italic">Master Bedroom Retreat</p>
-                <p className="text-xs opacity-80">Residential · DHA Lahore</p>
+              {/* IMAGE */}
+              <img
+                src={img}
+                className="w-full h-[260px] object-cover transition duration-500 group-hover:scale-105"
+              />
+
+              {/* OVERLAY (only visible on hover) */}
+              <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4">
+
+                <div className="text-white">
+                  <p className="text-sm italic">Project Title</p>
+                  <p className="text-xs opacity-80">Category · Location</p>
+                </div>
+
               </div>
+
             </div>
-          </div>
-
-          {/* CARD 2 */}
-          <img src={img2} className="w-full h-[260px] object-cover rounded-2xl" />
-
-          {/* CARD 3 */}
-          <img src={img3} className="w-full h-[260px] object-cover rounded-2xl" />
-
-          {/* ROW 2 */}
-          <img src={img4} className="w-full h-[260px] object-cover rounded-2xl" />
-          <img src={img5} className="w-full h-[260px] object-cover rounded-2xl" />
-          <img src={img6} className="w-full h-[260px] object-cover rounded-2xl" />
+          ))}
 
         </div>
 
         {/* BUTTONS */}
         <div className="flex justify-center gap-4 mt-12">
 
-          <button className="bg-black text-white px-6 py-2 rounded-full text-sm">
+          <button className="btn-primary">
             Load more...
           </button>
 
-          <button className="border border-gray-400 px-6 py-2 rounded-full text-sm">
+          <button className="btn-outline">
             Book a Consultation
           </button>
 

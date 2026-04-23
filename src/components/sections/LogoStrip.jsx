@@ -5,19 +5,25 @@ import appi from "../../assets/logos/appi.png";
 import cigna from "../../assets/logos/cigna.png";
 import caresource from "../../assets/logos/caresource.png";
 
+const logos = [medicaid, csp, aviva, appi, cigna, caresource];
+
 function LogoStrip() {
   return (
-    <div className="bg-[#fff] py-10">
-      <div className="max-w-6xl mx-auto px-6 flex flex-wrap items-center justify-between gap-8 opacity-70">
+   <div className="bg-white py-10 overflow-hidden">
 
-        <img src={medicaid} alt="medicaid" className="h-12 object-contain  grayscale brightness-70" />
-        <img src={csp} alt="csp" className="h-12 object-contain  grayscale brightness-70" />
-        <img src={aviva} alt="aviva" className="h-12 object-contain grayscale brightness-70" />
-        <img src={appi} alt="appi" className="h-12 object-contain  grayscale brightness-70" />
-        <img src={cigna} alt="cigna" className="h-12 object-contain  grayscale brightness-70" />
-        <img src={caresource} alt="caresource" className="h-12 object-contain  grayscale brightness-70" />
+      <div className="flex w-max animate-marquee">
+
+        {[...logos, ...logos].map((logo, index) => (
+          <div key={index} className="flex items-center justify-center px-10">
+            <img
+              src={logo}
+              className="h-12 object-contain grayscale brightness-75 opacity-70"
+            />
+          </div>
+        ))}
 
       </div>
+
     </div>
   );
 }

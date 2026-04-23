@@ -35,25 +35,34 @@ function WhySection() {
 
             {/* BUTTONS */}
             <div className="mt-8 flex gap-4">
-              <button className="bg-black text-white px-6 py-3 rounded-full text-sm">
+
+              {/* ✅ Hover applied */}
+              <button className="btn-primary">
                 Book a Consultation
               </button>
 
-              <button className="border border-black px-6 py-3 rounded-full text-sm">
+              {/* ✅ Hover applied */}
+              <button className="btn-outline">
                 View projects
               </button>
+
             </div>
 
           </div>
 
           {/* 🔥 RIGHT IMAGE */}
           <div className="md:w-[48%]">
-            <div className="w-full h-[420px] md:h-[480px] rounded-2xl overflow-hidden">
-              <img
-                src={whyImg}
-                alt="interior"
-                className="w-full h-full object-cover"
-              />
+            <div className="w-full h-[420px] md:h-[480px] rounded-2xl">
+
+              {/* ✅ Image hover wrapper */}
+              <div className="img-hover w-full h-full rounded-2xl">
+                <img
+                  src={whyImg}
+                  alt="interior"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
             </div>
           </div>
 

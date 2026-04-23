@@ -3,7 +3,7 @@ import AboutHero from "../components/sections/AboutHero";
 import FounderSection from "../components/sections/FounderSection";
 import TeamSection from "../components/sections/TeamSection";
 
-// ✅ Reused sections
+// Reused sections
 import AboutSection from "../components/sections/AboutSection";
 import ServicesSection from "../components/sections/ServicesSection";
 
@@ -17,7 +17,7 @@ function About() {
       <AboutHero />
       <FounderSection />
 
-      {/* 🔁 REUSED (instead of AboutIntro + AboutStats) */}
+      {/* REUSED (instead of AboutIntro + AboutStats) */}
       <AboutSection />
       <ServicesSection />
 

@@ -30,11 +30,11 @@ function Hero() {
 
             {/* Avatar Row */}
             <div className="flex items-center mb-3">
-              <img src={prsn1} className="w-8 h-8 rounded-full object-cover border-2 border-white" />
-              <img src={prsn2} className="w-8 h-8 rounded-full object-cover border-2 border-white -ml-2" />
-              <img src={prsn3} className="w-8 h-8 rounded-full object-cover border-2 border-white -ml-2" />
-              <img src={prsn4} className="w-8 h-8 rounded-full object-cover border-2 border-white -ml-2" />
-              <img src={prsn5} className="w-8 h-8 rounded-full object-cover border-2 border-white -ml-2" />
+              <img src={prsn1} className="w-8 h-8 rounded-full object-cover border-2 border-white icon-hover" />
+              <img src={prsn2} className="w-8 h-8 rounded-full object-cover border-2 border-white -ml-2 icon-hover" />
+              <img src={prsn3} className="w-8 h-8 rounded-full object-cover border-2 border-white -ml-2 icon-hover" />
+              <img src={prsn4} className="w-8 h-8 rounded-full object-cover border-2 border-white -ml-2 icon-hover" />
+              <img src={prsn5} className="w-8 h-8 rounded-full object-cover border-2 border-white -ml-2 icon-hover" />
             </div>
 
             <p className="font-semibold text-sm md:text-base">
@@ -45,7 +45,8 @@ function Hero() {
               We craft bespoke living environments for those who understand that a home is the truest expression of who you are. Serving discerning clientele across Lahore and beyond.
             </p>
 
-            <button className="mt-5 bg-black text-white px-5 py-2 rounded-full text-sm hover:opacity-90 transition">
+            {/* ✅ Button hover applied */}
+            <button className="mt-5 btn-primary">
               Book a Consultation
             </button>
 
@@ -56,12 +57,17 @@ function Hero() {
 
       {/* 🔥 HERO IMAGE */}
       <div className="w-full border-t">
-        <div className="w-full h-[380px] md:h-[460px] overflow-hidden">
-          <img
-            src={heroImg}
-            alt="hero"
-            className="w-full h-full object-cover object-[center_87%]"
-          />
+        <div className="w-full h-[380px] md:h-[460px]">
+
+          
+          <div className="w-full h-full">
+            <img
+              src={heroImg}
+              alt="hero"
+              className="w-full h-full object-cover object-[center_87%]"
+            />
+          </div>
+
         </div>
       </div>
 
