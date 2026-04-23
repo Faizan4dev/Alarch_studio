@@ -12,7 +12,7 @@ function AboutSection() {
         <div className="flex flex-col md:flex-row justify-between gap-12">
 
           {/* LEFT */}
-          <h2 className="text-4xl md:text-[56px] italic font-serif leading-tight md:w-[45%]">
+          <h2 className="text-4xl md:text-[56px] py-3 font-['Cormorant_Garamond'] leading-tight md:w-[45%]">
             About Alarach Studio
           </h2>
 
