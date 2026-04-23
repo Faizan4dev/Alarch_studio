@@ -1,24 +1,16 @@
-import Hero from "./components/hero.jsx";
-import AboutSection from "./components/AboutSection";
-import LogoStrip from "./components/LogoStrip";
-import WhySection from "./components/WhySection";
-import QualitySection from "./components/QualitySection";
-import ServicesSection from "./components/ServicesSection";
-import TestimonialSection from "./components/TestimonialSection";
-import FooterSection from "./components/FooterSection";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import Home from "./pages/Home";
+import Projects from "./pages/Projects";
 
 function App() {
   return (
-    <>
-      <Hero />
-      <LogoStrip />
-      <AboutSection />
-      <WhySection />
-      <QualitySection />
-      <ServicesSection />
-      <TestimonialSection />
-      <FooterSection />
-    </>
+    <BrowserRouter basename="/Alarch_studio">
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/projects" element={<Projects />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

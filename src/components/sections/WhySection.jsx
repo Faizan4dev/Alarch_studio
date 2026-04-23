@@ -1,4 +1,4 @@
-import whyImg from "../assets/why.jpeg"; // use correct image later
+import whyImg from "../../assets/why.jpeg"; // use correct image later
 
 function WhySection() {
   return (

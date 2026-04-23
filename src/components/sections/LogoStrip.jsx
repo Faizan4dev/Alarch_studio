@@ -1,9 +1,9 @@
-import medicaid from "../assets/logos/medicad.png";
-import csp from "../assets/logos/csp.png";
-import aviva from "../assets/logos/aviva.png";
-import appi from "../assets/logos/appi.png";
-import cigna from "../assets/logos/cigna.png";
-import caresource from "../assets/logos/caresource.png";
+import medicaid from "../../assets/logos/medicad.png";
+import csp from "../../assets/logos/csp.png";
+import aviva from "../../assets/logos/aviva.png";
+import appi from "../../assets/logos/appi.png";
+import cigna from "../../assets/logos/cigna.png";
+import caresource from "../../assets/logos/caresource.png";
 
 function LogoStrip() {
   return (

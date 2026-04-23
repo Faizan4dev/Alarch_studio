@@ -1,9 +1,9 @@
-import prsn6 from "../assets/prsn6.jpeg";
-import prsn7 from "../assets/prsn7.jpeg";
-import prsn8 from "../assets/prsn8.jpeg";
+import prsn6 from "../../assets/prsn6.jpeg";
+import prsn7 from "../../assets/prsn7.jpeg";
+import prsn8 from "../../assets/prsn8.jpeg";
 
-import flagSK from "../assets/slovakia.jpeg";
-import flagUS from "../assets/usa.jpeg";
+import flagSK from "../../assets/slovakia.jpeg";
+import flagUS from "../../assets/usa.jpeg";
 
 function TestimonialSection() {
   return (

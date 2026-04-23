@@ -1,9 +1,9 @@
-import Simg1 from "../assets/Simg1.jpeg";
-import Simg2 from "../assets/Simg2.jpeg";
-import Simg3 from "../assets/Simg3.jpeg";
-import Simg4 from "../assets/Simg4.jpeg";
-import Simg5 from "../assets/Simg5.jpeg";
-import Simg6 from "../assets/Simg6.jpeg";
+import Simg1 from "../../assets/Simg1.jpeg";
+import Simg2 from "../../assets/Simg2.jpeg";
+import Simg3 from "../../assets/Simg3.jpeg";
+import Simg4 from "../../assets/Simg4.jpeg";
+import Simg5 from "../../assets/Simg5.jpeg";
+import Simg6 from "../../assets/Simg6.jpeg";
 
 function ServicesSection() {
   return (
