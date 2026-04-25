@@ -7,49 +7,51 @@ function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const linkStyle = (path) =>
-    `block py-2 hover:text-black transition ${
-      location.pathname === path ? "text-black font-medium" : "text-gray-600"
+    `block py-2 transition ${
+      location.pathname === path
+        ? "text-black font-medium"
+        : "text-gray-600 hover:text-black"
     }`;
 
   return (
     <div className="w-full">
 
       {/* 🔥 TOP BAR */}
-      <div className="bg-black text-white px-4 py-[10px]">
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
+      <div className="bg-black text-white">
+        <div className="container-main py-2 flex items-center justify-between">
 
-          {/* LEFT SPACER */}
-          <div className="w-6 md:w-24"></div>
+          {/* LEFT (empty for balance on large screens) */}
+          <div className="hidden md:block w-24"></div>
 
           {/* CENTER TEXT */}
-          <p className="text-[14px] text-center font-['DM_Sans'] flex-1">
+          <p className="text-xs md:text-sm text-center flex-1">
             DM us now at WhatsApp <b>+44 7378 261 463</b>
           </p>
 
           {/* RIGHT ICONS */}
           <div className="flex gap-4 items-center">
-            <i className="fab fa-tiktok text-[18px] cursor-pointer hover:opacity-70"></i>
-            <i className="fab fa-instagram text-[18px] cursor-pointer hover:opacity-70"></i>
+            <i className="fab fa-tiktok text-sm md:text-base cursor-pointer hover:opacity-70"></i>
+            <i className="fab fa-instagram text-sm md:text-base cursor-pointer hover:opacity-70"></i>
           </div>
 
         </div>
       </div>
 
-      {/* 🔥 NAVBAR */}
-      <div className="bg-white border-b px-6 md:px-12">
-        <div className="max-w-7xl mx-auto py-4 flex items-center justify-between">
+      {/* 🔥 MAIN NAVBAR */}
+      <div className="bg-white border-b">
+        <div className="container-main py-4 flex items-center justify-between">
 
           {/* LOGO */}
-          <Link to="/" className="md:w-[190px]">
+          <Link to="/" className="flex items-center">
             <img
               src={alarch1}
               alt="Alarach Studio"
-              className="h-10 object-contain"
+              className="h-8 md:h-10 object-contain"
             />
           </Link>
 
           {/* DESKTOP LINKS */}
-          <div className="hidden md:flex space-x-10 text-sm">
+          <div className="hidden md:flex space-x-10 text-body">
             <Link to="/" className={linkStyle("/")}>Home</Link>
             <Link to="/projects" className={linkStyle("/projects")}>Projects</Link>
             <Link to="/about" className={linkStyle("/about")}>About Us</Link>
@@ -57,7 +59,7 @@ function Navbar() {
           </div>
 
           {/* CTA (desktop only) */}
-          <button className="hidden md:block bg-black text-white px-5 py-2 rounded-full text-sm hover:opacity-90 transition">
+          <button className="hidden md:block btn-primary">
             Book a Consultation
           </button>
 
@@ -66,36 +68,38 @@ function Navbar() {
             className="md:hidden text-2xl"
             onClick={() => setMenuOpen(!menuOpen)}
           >
-            ☰
+            {menuOpen ? "✕" : "☰"}
           </button>
 
         </div>
 
-        {/* MOBILE MENU */}
+        {/* 🔽 MOBILE MENU */}
         {menuOpen && (
-          <div className="md:hidden px-6 pb-4">
+          <div className="md:hidden border-t">
+            <div className="container-main py-4 flex flex-col">
 
-            <Link to="/" className={linkStyle("/")} onClick={() => setMenuOpen(false)}>
-              Home
-            </Link>
+              <Link to="/" className={linkStyle("/")} onClick={() => setMenuOpen(false)}>
+                Home
+              </Link>
 
-            <Link to="/projects" className={linkStyle("/projects")} onClick={() => setMenuOpen(false)}>
-              Projects
-            </Link>
+              <Link to="/projects" className={linkStyle("/projects")} onClick={() => setMenuOpen(false)}>
+                Projects
+              </Link>
 
-            <Link to="/about" className={linkStyle("/about")} onClick={() => setMenuOpen(false)}>
-              About Us
-            </Link>
+              <Link to="/about" className={linkStyle("/about")} onClick={() => setMenuOpen(false)}>
+                About Us
+              </Link>
 
-            <Link to="/contact" className={linkStyle("/contact")} onClick={() => setMenuOpen(false)}>
-              Contact Us
-            </Link>
+              <Link to="/contact" className={linkStyle("/contact")} onClick={() => setMenuOpen(false)}>
+                Contact Us
+              </Link>
 
-            {/* CTA */}
-            <button className="mt-3 w-full bg-black text-white px-5 py-2 rounded-full text-sm">
-              Book a Consultation
-            </button>
+              {/* CTA */}
+              <button className="mt-4 w-full btn-primary">
+                Book a Consultation
+              </button>
 
+            </div>
           </div>
         )}
 

@@ -5,88 +5,96 @@ import img3 from "../../assets/img3.jpeg";
 import img4 from "../../assets/img4.jpeg";
 import img5 from "../../assets/img1.jpeg";
 
+const projects = [
+  {
+    img: img1,
+    title: "Master Bedroom Retreat",
+    desc: "Residential · DHA Lahore",
+  },
+  {
+    img: img2,
+    title: "Living Room Design",
+    desc: "Residential · Gulberg Lahore",
+  },
+  {
+    img: why,
+    title: "Modern Kitchen Studio",
+    desc: "Commercial · Karachi",
+  },
+  {
+    img: img3,
+    title: "Executive Office Suite",
+    desc: "Commercial · Islamabad",
+  },
+  {
+    img: img4,
+    title: "Luxury Bath Sanctuary",
+    desc: "Residential · Bahria Town",
+  },
+  {
+    img: img5,
+    title: "Rooftop Lounge Area",
+    desc: "Commercial · DHA Karachi",
+  },
+];
+
 function QualitySection() {
   return (
-    <div className="bg-[#fff] px-6 py-24">
+    <div className="bg-white py-16 md:py-20 xl:py-24">
 
-      <div className="max-w-[1440px] mx-auto px-6 md:px-12">
+      <div className="container-main">
 
         {/* 🔥 HEADER */}
         <div className="text-center max-w-2xl mx-auto">
-          <h2 className="text-4xl md:text-[56px] italic font-serif">
+
+          <h2 className="heading-section italic">
             The Quality We Provide
           </h2>
 
-          <p className="text-sm text-gray-500 mt-3">
+          <p className="text-body mt-3">
             You deserve a home as beautiful as you vision it. Let's make it happen together.
           </p>
+
         </div>
 
         {/* 🔥 GRID */}
-        <div className="mt-14 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div className="mt-12 md:mt-14 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
 
-          {/* CARD 1 */}
-          <div className="relative rounded-2xl overflow-hidden group">
-            <img src={img1} className="w-full h-[260px] md:h-[280px] object-cover transition duration-500 group-hover:scale-105" />
-            <div className="absolute inset-0 bg-black/30 flex flex-col justify-end p-5">
-              <h3 className="text-white text-lg font-serif italic">Master Bedroom Retreat</h3>
-              <p className="text-xs text-gray-200">Residential · DHA Lahore</p>
-            </div>
-          </div>
+          {projects.map((item, index) => (
+            <div key={index} className="relative rounded-2xl overflow-hidden group">
 
-          {/* CARD 2 */}
-          <div className="relative rounded-2xl overflow-hidden group">
-            <img src={img2} className="w-full h-[260px] md:h-[280px] object-cover transition duration-500 group-hover:scale-105" />
-            <div className="absolute inset-0 bg-black/30 flex flex-col justify-end p-5">
-              <h3 className="text-white text-lg font-serif italic">Living Room Design</h3>
-              <p className="text-xs text-gray-200">Residential · Gulberg Lahore</p>
-            </div>
-          </div>
+              {/* IMAGE */}
+              <div className="h-[220px] sm:h-[240px] md:h-[260px] xl:h-[300px]">
+                <img
+                  src={item.img}
+                  alt={item.title}
+                  className="w-full h-full object-cover transition duration-500 group-hover:scale-105"
+                />
+              </div>
 
-          {/* CARD 3 */}
-          <div className="relative rounded-2xl overflow-hidden group">
-            <img src={why} className="w-full h-[260px] md:h-[280px] object-cover transition duration-500 group-hover:scale-105" />
-            <div className="absolute inset-0 bg-black/30 flex flex-col justify-end p-5">
-              <h3 className="text-white text-lg font-serif italic">Modern Kitchen Studio</h3>
-              <p className="text-xs text-gray-200">Commercial · Karachi</p>
-            </div>
-          </div>
+              {/* OVERLAY */}
+              <div className="absolute inset-0 bg-black/30 flex flex-col justify-end p-5">
 
-          {/* CARD 4 */}
-          <div className="relative rounded-2xl overflow-hidden group">
-            <img src={img3} className="w-full h-[260px] md:h-[280px] object-cover transition duration-500 group-hover:scale-105" />
-            <div className="absolute inset-0 bg-black/30 flex flex-col justify-end p-5">
-              <h3 className="text-white text-lg font-serif italic">Executive Office Suite</h3>
-              <p className="text-xs text-gray-200">Commercial · Islamabad</p>
-            </div>
-          </div>
+                <h3 className="text-white text-base md:text-lg font-['Cormorant_Garamond'] italic">
+                  {item.title}
+                </h3>
 
-          {/* CARD 5 */}
-          <div className="relative rounded-2xl overflow-hidden group">
-            <img src={img4} className="w-full h-[260px] md:h-[280px] object-cover transition duration-500 group-hover:scale-105" />
-            <div className="absolute inset-0 bg-black/30 flex flex-col justify-end p-5">
-              <h3 className="text-white text-lg font-serif italic">Luxury Bath Sanctuary</h3>
-              <p className="text-xs text-gray-200">Residential · Bahria Town</p>
-            </div>
-          </div>
+                <p className="text-xs text-gray-200">
+                  {item.desc}
+                </p>
 
-          {/* CARD 6 */}
-          <div className="relative rounded-2xl overflow-hidden group">
-            <img src={img5} className="w-full h-[260px] md:h-[280px] object-cover transition duration-500 group-hover:scale-105" />
-            <div className="absolute inset-0 bg-black/30 flex flex-col justify-end p-5">
-              <h3 className="text-white text-lg font-serif italic">Rooftop Lounge Area</h3>
-              <p className="text-xs text-gray-200">Commercial · DHA Karachi</p>
+              </div>
+
             </div>
-          </div>
+          ))}
 
         </div>
 
         {/* 🔥 BUTTONS */}
-        <div className="mt-12 flex justify-center gap-4">
+        <div className="mt-10 md:mt-12 flex flex-wrap justify-center gap-4">
 
-          {/* ✅ hover system */}
           <button className="btn-primary">
-            View All projects
+            View All Projects
           </button>
 
           <button className="btn-outline">

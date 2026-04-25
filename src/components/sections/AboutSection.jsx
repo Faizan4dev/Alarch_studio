@@ -20,15 +20,13 @@ function AboutSection() {
       ([entry]) => {
         if (entry.isIntersecting) {
           setStartCount(true);
+          observer.disconnect();
         }
       },
       { threshold: 0.4 }
     );
 
-    if (statsRef.current) {
-      observer.observe(statsRef.current);
-    }
-
+    if (statsRef.current) observer.observe(statsRef.current);
     return () => observer.disconnect();
   }, []);
 
@@ -66,26 +64,26 @@ function AboutSection() {
   }, [startCount]);
 
   return (
-    <div className="bg-[#fff] px-6 py-20">
+    <div className="bg-white py-16 md:py-20 xl:py-24">
 
-      {/* CONTAINER */}
-      <div className="max-w-[1400px] mx-auto px-6 md:px-14">
+      {/* 🔥 CONTAINER */}
+      <div className="container-main">
 
         {/* 🔥 TOP ROW */}
-        <div className="flex flex-col md:flex-row justify-between gap-12">
+        <div className="flex flex-col md:flex-row justify-between gap-10 xl:gap-14">
 
           {/* LEFT */}
-          <h2 className="text-4xl md:text-[56px] py-3 font-['Cormorant_Garamond'] leading-tight md:w-[45%]">
+          <h2 className="heading-section md:w-[45%] max-w-[600px]">
             About Alarach Studio
           </h2>
 
           {/* RIGHT */}
-          <div className="md:w-[47%]">
-            <p className="text-sm text-gray-600 leading-relaxed">
+          <div className="md:w-[45%] xl:w-[40%]">
+            <p className="text-body">
               Alarc Studio is a design practice focused on creating spaces that feel as thoughtful as they look. Rooted in deep listening, we transform each client's lifestyle and vision into quietly refined environments—where every detail is intentional. From private residences to large-scale commercial projects, our work blends craftsmanship, longevity, and a subtle, lasting sense of beauty.
             </p>
 
-            <div className="mt-6 flex gap-4">
+            <div className="mt-6 flex flex-wrap gap-4">
               <button className="btn-primary">
                 Book a Consultation
               </button>
@@ -99,17 +97,17 @@ function AboutSection() {
         </div>
 
         {/* 🔥 IMAGE ROW */}
-        <div className="mt-16 flex gap-6">
+        <div className="mt-12 md:mt-16 flex flex-col md:flex-row gap-6">
 
-          <div className="w-[34%] min-w-0 h-[400px] rounded-2xl">
+          <div className="w-full md:w-[34%] h-[240px] sm:h-[300px] md:h-[360px] xl:h-[420px] rounded-2xl">
             <div className="img-hover w-full h-full rounded-2xl">
-              <img src={img1} className="w-full h-full object-cover" alt="" />
+              <img src={img1} alt="" />
             </div>
           </div>
 
-          <div className="w-[66%] min-w-0 h-[400px] rounded-2xl">
+          <div className="w-full md:w-[66%] h-[240px] sm:h-[300px] md:h-[360px] xl:h-[420px] rounded-2xl">
             <div className="img-hover w-full h-full rounded-2xl">
-              <img src={img2} className="w-full h-full object-cover" alt="" />
+              <img src={img2} alt="" />
             </div>
           </div>
 
@@ -118,35 +116,43 @@ function AboutSection() {
         {/* 🔥 STATS */}
         <div
           ref={statsRef}
-          className="mt-16 grid grid-cols-2 md:grid-cols-4 text-center border-t pt-10"
+          className="mt-12 md:mt-16 grid grid-cols-2 md:grid-cols-4 text-center border-t pt-8 md:pt-10 gap-y-6"
         >
 
           <div>
-            <h3 className="text-2xl md:text-3xl font-serif italic">
+            <h3 className="font-serif italic text-[32px] md:text-[48px] font-bold">
               {counts.projects}+
             </h3>
-            <p className="text-sm text-gray-500 mt-2">Projects Delivered</p>
+            <p className="text-xs md:text-sm text-gray-500 mt-2">
+              Projects Delivered
+            </p>
           </div>
 
           <div>
-            <h3 className="text-2xl md:text-3xl font-serif italic">
+            <h3 className="font-serif italic text-[32px] md:text-[48px] font-bold">
               {counts.clients}%
             </h3>
-            <p className="text-sm text-gray-500 mt-2">Repeat Clients</p>
+            <p className="text-xs md:text-sm text-gray-500 mt-2">
+              Repeat Clients
+            </p>
           </div>
 
           <div>
-            <h3 className="text-2xl md:text-3xl font-serif italic">
+            <h3 className="font-serif italic text-[32px] md:text-[48px] font-bold">
               {String(counts.ongoing).padStart(2, "0")}
             </h3>
-            <p className="text-sm text-gray-500 mt-2">Ongoing Projects</p>
+            <p className="text-xs md:text-sm text-gray-500 mt-2">
+              Ongoing Projects
+            </p>
           </div>
 
           <div>
-            <h3 className="text-2xl md:text-3xl font-serif italic">
+            <h3 className="font-serif italic text-[32px] md:text-[48px] font-bold">
               {counts.satisfaction}%
             </h3>
-            <p className="text-sm text-gray-500 mt-2">Client Satisfaction</p>
+            <p className="text-xs md:text-sm text-gray-500 mt-2">
+              Client Satisfaction
+            </p>
           </div>
 
         </div>

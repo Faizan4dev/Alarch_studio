@@ -2,7 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-/* hide scrollbar */
+/* ============================= */
+/* 🔥 GLOBAL RESET / UTILS */
+/* ============================= */
+
+/* Hide scrollbar */
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
@@ -11,7 +15,103 @@
   scrollbar-width: none;
 }
 
-/* logo strip floating */
+/* ============================= */
+/* CONTAINER SYSTEM */
+/* ============================= */
+
+.container-main {
+  @apply w-full mx-auto 
+         px-6 md:px-12 xl:px-20 2xl:px-24 
+         max-w-[1440px];
+}
+
+/* ============================= */
+/* TYPOGRAPHY SYSTEM */
+/* ============================= */
+
+/* Hero Heading (H1) */
+.heading-hero {
+  @apply text-4xl sm:text-5xl md:text-6xl xl:text-7xl 2xl:text-[104px]
+         leading-tight 2xl:leading-[120px]
+         font-[700] italic font-['Cormorant_Garamond'] tracking-tight;
+}
+
+/* Section Heading (H2/H3) */
+.heading-section {
+  @apply text-2xl md:text-4xl xl:text-5xl 2xl:text-[64px]
+         font-['Cormorant_Garamond'] tracking-tight;
+}
+
+/* Body Text */
+.text-body {
+  @apply text-sm md:text-base text-black leading-relaxed font-['DM_Sans'];
+}
+
+/* ============================= */
+/* BUTTON SYSTEM */
+/* ============================= */
+
+.btn-primary {
+  @apply bg-black text-white 
+         px-5 py-2 md:px-6 md:py-3 
+         rounded-full text-sm md:text-base 
+         transition-all duration-300 
+         hover:opacity-90 hover:scale-[1.03] 
+         active:scale-95;
+}
+
+.btn-outline {
+  @apply border border-gray-400 
+         px-5 py-2 md:px-6 md:py-3 
+         rounded-full text-sm md:text-base 
+         transition-all duration-300 
+         hover:bg-black hover:text-white hover:border-black 
+         active:scale-95;
+}
+.btn-primary:hover {
+  transform: translateY(-1px);
+}
+
+/* ============================= */
+/* IMAGE / CARD INTERACTIONS */
+/* ============================= */
+
+.img-hover {
+  @apply overflow-hidden rounded-xl;
+}
+
+.img-hover img {
+  @apply w-full h-full object-cover transition-transform duration-500 ease-in-out;
+}
+
+.img-hover:hover img {
+  transform: scale(1.05);
+}
+
+/* Card hover */
+.card-hover {
+  @apply transition-all duration-300;
+}
+
+.card-hover:hover {
+  transform: translateY(-6px);
+  @apply shadow-lg;
+}
+
+/* Icon hover (keep subtle) */
+.icon-hover {
+  @apply transition duration-200;
+}
+
+.icon-hover:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+/* ============================= */
+/* LOGO STRIP ANIMATION */
+/* ============================= */
+
 @keyframes marquee {
   0% {
     transform: translateX(0);
@@ -22,56 +122,29 @@
 }
 
 .animate-marquee {
-  animation: marquee 15s linear infinite;
+  animation: marquee 18s linear infinite;
+  display: flex;
 }
 
-/* ================= */
-/* Hover effects    */
-/* ================= */
-/* 🔥 BUTTON */
-.btn-primary {
-  @apply bg-black text-white px-6 py-3 rounded-full text-sm 
-  transition-all duration-200 
-  hover:opacity-90 hover:scale-[1.03] 
-  active:scale-95;
+/* ============================= */
+/* IMAGE STRIP ANIMATION */
+/* ============================= */
+
+@keyframes marqueeImages {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
-.btn-outline {
-  @apply border border-black px-6 py-3 rounded-full text-sm 
-  transition-all duration-200 
-  hover:bg-black hover:text-white 
-  active:scale-95;
+.animate-marquee-images {
+  animation: marqueeImages 35s linear infinite;
+  display: flex;
 }
 
-/* 🔥 IMAGE HOVER */
-.img-hover {
-  @apply overflow-hidden;
-}
-
-.img-hover img {
-  @apply transition duration-500 ease-in-out;
-}
-
-.img-hover:hover img {
-  transform: scale(1.05);
-}
-
-/* 🔥 CARD */
-.card-hover {
-  @apply transition-all duration-300;
-}
-
-.card-hover:hover {
-  transform: translateY(-6px);
-  @apply shadow-lg;
-}
-
-/* 🔥 ICON */
-.icon-hover {
-  @apply transition duration-200;
-}
-
-.icon-hover:hover {
-  transform: scale(1.15);
-  opacity: 0.7;
+/* pause on hover */
+.animate-marquee-images:hover {
+  animation-play-state: paused;
 }

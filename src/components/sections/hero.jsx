@@ -11,41 +11,42 @@ function Hero() {
   return (
     <div className="w-full font-sans">
 
-      {/* ✅ REUSABLE NAVBAR */}
+      {/* NAVBAR */}
       <Navbar />
 
       {/* 🔥 HERO CONTENT */}
-      <div className="bg-white">
-        <div className="max-w-5xl mx-auto px-6 md:px-10 py-12 md:py-10 flex flex-col md:flex-row justify-between items-center gap-6">
-          
+      <div className="bg-[#fff]">
+        <div className="container-main pt-10 pb-8 md:pt-14 md:pb-10 xl:pt-16 xl:pb-12 flex flex-col md:flex-row justify-between items-start gap-8 xl:gap-12">
+
           {/* LEFT */}
-          <div className="md:w-[58%]">
-            <h1 className="text-[60px] md:text-[80px] italic font-medium leading-[1.1] tracking-tight text-black font-['Cormorant_Garamond']">
+          <div className="w-full md:w-[58%]">
+
+            <h1 className="heading-hero max-w-[700px] 2xl:max-w-[850px]">
               Spaces That Tell Your Story
             </h1>
+
           </div>
 
           {/* RIGHT */}
-          <div className="md:w-[34%]">
+          <div className="w-full md:w-[34%] mt-4 md:mt-0">
 
             {/* Avatar Row */}
             <div className="flex items-center mb-3">
-              <img src={prsn1} className="w-8 h-8 rounded-full object-cover border-2 border-white icon-hover" />
-              <img src={prsn2} className="w-8 h-8 rounded-full object-cover border-2 border-white -ml-2 icon-hover" />
-              <img src={prsn3} className="w-8 h-8 rounded-full object-cover border-2 border-white -ml-2 icon-hover" />
-              <img src={prsn4} className="w-8 h-8 rounded-full object-cover border-2 border-white -ml-2 icon-hover" />
-              <img src={prsn5} className="w-8 h-8 rounded-full object-cover border-2 border-white -ml-2 icon-hover" />
+              <img src={prsn1} className="w-8 h-8 rounded-full object-cover border-2 border-white" />
+              <img src={prsn2} className="w-8 h-8 rounded-full object-cover border-2 border-white -ml-2" />
+              <img src={prsn3} className="w-8 h-8 rounded-full object-cover border-2 border-white -ml-2" />
+              <img src={prsn4} className="w-8 h-8 rounded-full object-cover border-2 border-white -ml-2" />
+              <img src={prsn5} className="w-8 h-8 rounded-full object-cover border-2 border-white -ml-2" />
             </div>
 
             <p className="font-semibold text-sm md:text-base">
               1000+ Happy Clients
             </p>
 
-            <p className="text-sm text-gray-600 mt-2 leading-relaxed max-w-xs">
+            <p className="text-body mt-3 max-w-xs">
               We craft bespoke living environments for those who understand that a home is the truest expression of who you are. Serving discerning clientele across Lahore and beyond.
             </p>
 
-            {/* ✅ Button hover applied */}
             <button className="mt-5 btn-primary">
               Book a Consultation
             </button>
@@ -56,19 +57,19 @@ function Hero() {
       </div>
 
       {/* 🔥 HERO IMAGE */}
-      <div className="w-full border-t">
-        <div className="w-full h-[380px] md:h-[460px]">
+      <div className="relative w-full border-t">
 
-          
-          <div className="w-full h-full">
-            <img
-              src={heroImg}
-              alt="hero"
-              className="w-full h-full object-cover object-[center_87%]"
-            />
-          </div>
-
+        <div className="w-full h-[260px] sm:h-[320px] md:h-[420px] xl:h-[520px] 2xl:h-[620px]">
+          <img
+            src={heroImg}
+            alt="hero"
+            className="w-full h-full object-cover object-center"
+          />
         </div>
+
+        {/* smooth transition */}
+        <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-b from-transparent to-white"></div>
+
       </div>
 
     </div>

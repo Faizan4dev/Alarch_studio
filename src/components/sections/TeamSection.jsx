@@ -36,7 +36,7 @@ function TeamSection() {
 
   const scroll = (direction) => {
     const container = scrollRef.current;
-    const scrollAmount = 350;
+    const scrollAmount = 320;
 
     if (direction === "left") {
       container.scrollLeft -= scrollAmount;
@@ -46,83 +46,98 @@ function TeamSection() {
   };
 
   return (
-    <div className="w-full bg-white py-20">
+    <div className="w-full bg-white py-16 md:py-20 xl:py-24">
 
-      {/* 🔥 HEADER */}
-      <div className="text-center mb-12 px-6">
-        <h2 className="text-[42px] md:text-[48px] italic font-['Cormorant_Garamond']">
-          Meet Our Team
-        </h2>
-        <p className="text-sm text-black mt-3 max-w-[600px] mx-auto">
-          The minds behind every detail — a team of designers and architects
-          dedicated to turning vision into refined, timeless spaces.
-        </p>
-      </div>
+      <div className="container-main">
 
-      {/* 🔥 SLIDER */}
-      <div className="relative max-w-[1440px] mx-auto px-6">
+        {/* 🔥 HEADER */}
+        <div className="text-center max-w-2xl mx-auto mb-12">
 
-        {/* LEFT BUTTON */}
-        <button
-          onClick={() => scroll("left")}
-          className="absolute left-2 md:left-0 top-1/2 -translate-y-1/2 z-10 bg-white border rounded-full w-10 h-10 shadow icon-hover"
-        >
-          ←
-        </button>
+          <h2 className="heading-section italic">
+            Meet Our Team
+          </h2>
 
-        {/* RIGHT BUTTON */}
-        <button
-          onClick={() => scroll("right")}
-          className="absolute right-2 md:right-0 top-1/2 -translate-y-1/2 z-10 bg-white border rounded-full w-10 h-10 shadow icon-hover"
-        >
-          →
-        </button>
+          <p className="text-body mt-3">
+            The minds behind every detail — a team of designers and architects
+            dedicated to turning vision into refined, timeless spaces.
+          </p>
 
-        {/* SCROLL CONTAINER */}
-        <div
-          ref={scrollRef}
-          className="flex gap-8 overflow-x-auto scroll-smooth no-scrollbar"
-        >
-          {team.map((member, index) => (
-            <div
-              key={index}
-              className="min-w-[300px] bg-white rounded-xl overflow-hidden transition duration-300 hover:shadow-md"
-            >
+        </div>
 
-              {/* IMAGE */}
-              <div className="overflow-hidden">
-                <img
-                  src={member.img}
-                  alt={member.name}
-                  className="w-full h-[300px] object-cover transition duration-500 hover:scale-105"
-                />
-              </div>
+        {/* 🔥 SLIDER */}
+        <div className="relative">
 
-              {/* CONTENT */}
-              <div className="p-5 text-left">
+          {/* LEFT BUTTON (hidden on mobile) */}
+          <button
+            onClick={() => scroll("left")}
+            className="hidden md:flex absolute -left-4 top-1/2 -translate-y-1/2 z-10 bg-white border border-gray-300 rounded-full w-10 h-10 items-center justify-center shadow-sm icon-hover"
+          >
+            ←
+          </button>
 
-                <p className="text-[18px] font-medium">{member.name}</p>
+          {/* RIGHT BUTTON (hidden on mobile) */}
+          <button
+            onClick={() => scroll("right")}
+            className="hidden md:flex absolute -right-4 top-1/2 -translate-y-1/2 z-10 bg-white border border-gray-300 rounded-full w-10 h-10 items-center justify-center shadow-sm icon-hover"
+          >
+            →
+          </button>
 
-                <p className="text-sm text-gray-500">{member.role}</p>
+          {/* SCROLL CONTAINER */}
+          <div
+            ref={scrollRef}
+            className="flex gap-6 md:gap-8 overflow-x-auto scroll-smooth no-scrollbar"
+          >
+            {team.map((member, index) => (
+              <div
+                key={index}
+                className="min-w-[260px] sm:min-w-[280px] md:min-w-[300px] bg-white rounded-2xl overflow-hidden card-hover"
+              >
 
-                <p className="text-sm text-gray-600 mt-3 leading-relaxed">
-                  {member.desc}
-                </p>
+                {/* IMAGE */}
+                <div className="h-[260px] sm:h-[280px] md:h-[300px] overflow-hidden">
+                  <img
+                    src={member.img}
+                    alt={member.name}
+                    className="w-full h-full object-cover transition duration-500 hover:scale-105"
+                  />
+                </div>
 
-                {/* ICONS */}
-                <div className="flex gap-4 mt-4 text-lg text-gray-500">
-                  <i className="fa-brands fa-linkedin cursor-pointer hover:text-black transition"></i>
-                  <i className="fa-brands fa-x-twitter cursor-pointer hover:text-black transition"></i>
-                  <i className="fa-solid fa-globe cursor-pointer hover:text-black transition"></i>
+                {/* CONTENT */}
+                <div className="p-5 text-center md:text-left">
+
+                  <p className="text-base md:text-lg font-medium">
+                    {member.name}
+                  </p>
+
+                  <p className="text-sm text-gray-500">
+                    {member.role}
+                  </p>
+
+                  <p className="text-body mt-3 text-gray-600">
+                    {member.desc}
+                  </p>
+
+                  {/* ICONS */}
+                  <div className="flex justify-center md:justify-start gap-4 mt-4 text-gray-500">
+
+                    <i className="fa-brands fa-linkedin cursor-pointer hover:text-black transition"></i>
+
+                    <i className="fa-brands fa-x-twitter cursor-pointer hover:text-black transition"></i>
+
+                    <i className="fa-solid fa-globe cursor-pointer hover:text-black transition"></i>
+
+                  </div>
+
                 </div>
 
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+
         </div>
 
       </div>
-
     </div>
   );
 }

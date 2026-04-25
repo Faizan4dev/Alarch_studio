@@ -9,18 +9,33 @@ const logos = [medicaid, csp, aviva, appi, cigna, caresource];
 
 function LogoStrip() {
   return (
-   <div className="bg-white py-10 overflow-hidden">
+    <div className="bg-white py-6 md:py-8">
 
-      <div className="flex w-max animate-marquee">
+      <div className="relative overflow-hidden">
 
-        {[...logos, ...logos].map((logo, index) => (
-          <div key={index} className="flex items-center justify-center px-10">
-            <img
-              src={logo}
-              className="h-12 object-contain grayscale brightness-75 opacity-70"
-            />
-          </div>
-        ))}
+        {/* 🔥 LEFT FADE */}
+        <div className="pointer-events-none absolute left-0 top-0 h-full w-16 md:w-24 bg-gradient-to-r from-white to-transparent z-10"></div>
+
+        {/* 🔥 RIGHT FADE */}
+        <div className="pointer-events-none absolute right-0 top-0 h-full w-16 md:w-24 bg-gradient-to-l from-white to-transparent z-10"></div>
+
+        {/* 🔥 MARQUEE */}
+        <div className="flex w-max animate-marquee">
+
+          {[...logos, ...logos].map((logo, index) => (
+            <div
+              key={index}
+              className="flex items-center justify-center px-8 md:px-12 xl:px-16"
+            >
+              <img
+                src={logo}
+                alt="logo"
+                className="h-8 md:h-10 xl:h-12 object-contain grayscale opacity-60 transition duration-300 hover:opacity-100"
+              />
+            </div>
+          ))}
+
+        </div>
 
       </div>
 

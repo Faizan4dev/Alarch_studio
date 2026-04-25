@@ -6,35 +6,60 @@ function CTA({
   buttonText = "Book a Consultation",
 }) {
   return (
-    <div className="relative w-full h-[420px] md:h-[520px] overflow-hidden group">
-      
-      
+    <div className="relative w-full h-[420px] md:h-[520px] overflow-hidden">
+
+      {/* IMAGE */}
       <img
         src={ctaImg}
         alt="cta"
-        className="w-full h-full object-cover "
+        className="w-full h-full object-cover"
       />
 
+      {/* DARK OVERLAY */}
       <div className="absolute inset-0 bg-black/50"></div>
 
-      <div className="absolute inset-0 flex items-end pb-[100px] px-6 md:px-16">
-        <div className="text-white max-w-xl">
+      {/* CONTENT */}
+      <div className="absolute inset-0 flex items-center">
 
-          <h2 className="text-3xl md:text-5xl italic font-serif leading-tight">
-            {title}
-          </h2>
+        {/* 🔥 DESKTOP PERFECT (Figma) + RESPONSIVE SAFE */}
+        <div className="
+          w-full
+          px-6 md:px-12 
+          xl:px-[96px]
+        ">
 
-          <p className="mt-4 text-sm md:text-base text-gray-200 max-w-md">
-            {desc}
-          </p>
+          <div className="
+            text-white
+            max-w-full
+            xl:max-w-[600px]
+            xl:pl-0
+          ">
 
-          {/* ✅ white button hover (custom, not btn-primary) */}
-          <button className="mt-6 bg-white text-black px-6 py-3 rounded-full text-sm font-medium transition duration-200 hover:bg-gray-200 active:scale-95">
-            {buttonText}
-          </button>
+            {/* H4 */}
+            <h2 className="
+              italic font-['Cormorant_Garamond']
+              text-2xl sm:text-3xl md:text-4xl xl:text-[48px]
+              leading-tight
+            ">
+              {title}
+            </h2>
+
+            {/* PARAGRAPH */}
+            <p className="mt-4 text-sm md:text-base text-gray-200 max-w-md">
+              {desc}
+            </p>
+
+            {/* BUTTON */}
+            <button className="mt-6 bg-white text-black px-5 py-2 md:px-6 md:py-3 rounded-full text-sm md:text-base transition duration-300 hover:bg-gray-200 active:scale-95">
+              {buttonText}
+            </button>
+
+          </div>
 
         </div>
+
       </div>
+
     </div>
   );
 }

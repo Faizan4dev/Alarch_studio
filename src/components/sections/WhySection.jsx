@@ -1,21 +1,23 @@
-import whyImg from "../../assets/why.jpeg"; // use correct image later
+import whyImg from "../../assets/why.jpeg";
 
 function WhySection() {
   return (
-    <div className="bg-[#fff] px-6 py-16">
+    <div className="bg-white py-16 md:py-20 xl:py-24">
 
-      <div className="max-w-[1440px] mx-auto px-6 md:px-10">
+      {/* 🔥 CONTAINER */}
+      <div className="container-main">
 
-        <div className="flex flex-col md:flex-row items-center gap-16">
+        <div className="flex flex-col md:flex-row items-center gap-10 xl:gap-16">
 
           {/* 🔥 LEFT */}
-          <div className="md:w-[45%]">
+          <div className="w-full md:w-[45%]">
 
-            <h2 className="text-4xl md:text-[56px] italic font-serif leading-tight">
+            <h2 className="heading-section italic font-64px font-[700]">
               Why Alarch Studio
             </h2>
 
-            <div className="mt-6 space-y-5 text-sm text-gray-600 leading-relaxed max-w-md">
+            <div className="mt-6 space-y-5 text-body max-w-md">
+
               <p>
                 We design more than rooms. We shape how a space feels the moment you step inside.
               </p>
@@ -31,18 +33,17 @@ function WhySection() {
               <p>
                 We take on a limited number of projects to give each one complete focus. The result is not just a beautiful space. It is entirely yours.
               </p>
+
             </div>
 
             {/* BUTTONS */}
-            <div className="mt-8 flex gap-4">
+            <div className="mt-8 flex flex-wrap gap-4">
 
-              {/* ✅ Hover applied */}
               <button className="btn-primary">
                 Book a Consultation
               </button>
 
-              {/* ✅ Hover applied */}
-              <button className="btn-outline">
+              <button className="btn-outline" >
                 View projects
               </button>
 
@@ -51,19 +52,19 @@ function WhySection() {
           </div>
 
           {/* 🔥 RIGHT IMAGE */}
-          <div className="md:w-[48%]">
-            <div className="w-full h-[420px] md:h-[480px] rounded-2xl">
+          <div className="w-full md:w-[48%]">
 
-              {/* ✅ Image hover wrapper */}
+            <div className="w-full h-[260px] sm:h-[320px] md:h-[420px] xl:h-[480px] rounded-2xl">
+
               <div className="img-hover w-full h-full rounded-2xl">
                 <img
                   src={whyImg}
                   alt="interior"
-                  className="w-full h-full object-cover"
                 />
               </div>
 
             </div>
+
           </div>
 
         </div>
