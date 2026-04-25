@@ -73,7 +73,7 @@ function AboutSection() {
         <div className="flex flex-col md:flex-row justify-between gap-10 xl:gap-14">
 
           {/* LEFT */}
-          <h2 className="heading-section md:w-[45%] max-w-[600px]">
+          <h2 className="heading-section italic font-[700] md:w-[45%] max-w-[600px]">
             About Alarach Studio
           </h2>
 
