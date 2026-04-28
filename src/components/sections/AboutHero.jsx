@@ -16,23 +16,24 @@ function AboutHero() {
         <img
           src={titleImg}
           alt="Alarach Studio"
-          className="w-[260px] sm:w-[420px] md:w-[720px] xl:w-[1080px]"
+          className="w-[260px] sm:w-[420px] md:w-[720px] xl:w-[1080px] 2xl:w-[1200px]"
         />
       </div>
 
-      {/* 🔥 IMAGE STRIP (AUTO SCROLL) — px-0 */}
-      <div className="px-0 pb-12">
+      {/* 🔥 IMAGE STRIP */}
+      <div className="pb-12">
 
-        <div className="relative overflow-hidden h-[260px] md:h-[300px]">
+        <div className="relative overflow-hidden h-[260px] md:h-[300px] xl:h-[340px]">
 
-          {/* MARQUEE */}
           <div className="flex w-max animate-marquee-images gap-5 items-center h-full">
             {[...images, ...images].map((img, i) => (
               <img
                 key={i}
                 src={img}
                 alt="about"
-                className="h-[200px] md:h-[320px] w-[280px] md:w-[508px] object-cover rounded-[35px]"
+                className="h-[200px] md:h-[260px] xl:h-[300px] 
+                           w-[280px] md:w-[420px] xl:w-[520px] 
+                           object-cover rounded-[35px]"
               />
             ))}
           </div>
@@ -42,19 +43,19 @@ function AboutHero() {
       </div>
 
       {/* 🔥 ABOUT SECTION */}
-      <div className="px-6 md:px-12 xl:px-[96px] py-12">
+      <div className="container-main py-12 md:py-16 xl:py-20">
 
-        <div className="grid md:grid-cols-[1fr_80px_1fr] items-start">
+        <div className="grid md:grid-cols-[1fr_80px_1fr] xl:grid-cols-[1fr_120px_1fr] items-start">
 
-          {/* LEFT — forced line break at 1440 */}
+          {/* LEFT */}
           <h2
             className="
               italic font-['Cormorant_Garamond']
               font-[700]
-              text-[42px] sm:text-[56px] md:text-[64px] xl:text-[96px]
+              text-[42px] sm:text-[56px] md:text-[64px] xl:text-[88px] 2xl:text-[104px]
               leading-[0.95]
               tracking-tight
-              max-w-[584px]
+              max-w-[600px] xl:max-w-[700px]
             "
           >
             About Alarach<br />
@@ -65,7 +66,7 @@ function AboutHero() {
           <div className="hidden md:block"></div>
 
           {/* RIGHT */}
-          <div className="max-w-[420px] mt-4 md:mt-8">
+          <div className="max-w-[420px] xl:max-w-[500px] mt-6 md:mt-8">
 
             <p className="text-sm md:text-base text-gray-600 leading-relaxed">
               Alarach Studio — where architecture meets intention. We design
@@ -75,7 +76,6 @@ function AboutHero() {
               choose, and invest in.
             </p>
 
-            {/* BUTTON */}
             <button className="mt-6 btn-primary">
               Book a Consultation
             </button>

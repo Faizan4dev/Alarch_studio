@@ -14,21 +14,21 @@ function Hero() {
       {/* NAVBAR */}
       <Navbar />
 
-      {/* 🔥 HERO CONTENT */}
+      {/* HERO CONTENT */}
       <div className="bg-[#fff]">
         <div className="container-main pt-10 pb-8 md:pt-14 md:pb-10 xl:pt-16 xl:pb-12 flex flex-col md:flex-row justify-between items-start gap-8 xl:gap-12">
 
           {/* LEFT */}
-          <div className="w-full md:w-[58%]">
+          <div className="w-full md:w-[58%] xl:w-[60%]">
 
-            <h1 className="heading-hero max-w-[700px] 2xl:max-w-[850px]">
+            <h1 className="heading-hero max-w-[700px] xl:max-w-[800px] 2xl:max-w-[900px]">
               Spaces That Tell Your Story
             </h1>
 
           </div>
 
           {/* RIGHT */}
-          <div className="w-full md:w-[34%] mt-4 md:mt-0">
+          <div className="w-full md:w-[34%] xl:w-[30%] mt-4 md:mt-0">
 
             {/* Avatar Row */}
             <div className="flex items-center mb-3">
@@ -43,7 +43,7 @@ function Hero() {
               1000+ Happy Clients
             </p>
 
-            <p className="text-body mt-3 max-w-xs">
+            <p className="text-body mt-3 max-w-xs xl:max-w-sm">
               We craft bespoke living environments for those who understand that a home is the truest expression of who you are. Serving discerning clientele across Lahore and beyond.
             </p>
 
@@ -56,7 +56,7 @@ function Hero() {
         </div>
       </div>
 
-      {/* 🔥 HERO IMAGE */}
+      {/* HERO IMAGE */}
       <div className="relative w-full border-t">
 
         <div className="w-full h-[260px] sm:h-[320px] md:h-[420px] xl:h-[520px] 2xl:h-[620px]">
