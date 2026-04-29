@@ -16,19 +16,19 @@ function Hero() {
 
       {/* HERO CONTENT */}
       <div className="bg-white">
-        <div className="container-main pt-10 md:pt-14 xl:pt-16 pb-8 md:pb-10 xl:pb-12 flex flex-col md:flex-row justify-between items-center md:items-start gap-10 xl:gap-16">
+        <div className="container-main pt-10 md:pt-14 xl:pt-16 pb-8 md:pb-10 xl:pb-12 flex flex-col md:flex-row justify-between items-center md:items-start gap-10 xl:gap-16 2xl:gap-8">
 
           {/* LEFT */}
-          <div className="w-full md:w-[65%] xl:w-[75%]">
+          <div className="w-full md:w-[65%] xl:w-[75%] 2xl:w-[55%]">
 
-            <h1 className="heading-hero max-w-[520px] md:max-w-[580px] xl:max-w-[90%]">
+            <h1 className="heading-hero max-w-[520px] md:max-w-[580px] xl:max-w-[90%] 2xl:max-w-[90%]">
               Spaces That Tell Your Story
             </h1>
 
           </div>
 
           {/* RIGHT */}
-          <div className="w-full md:w-[40%] xl:w-[35%] mt-6 md:mt-2 flex flex-col">
+          <div className="w-full md:w-[40%] xl:w-[35%] 2xl:w-[40%] mt-6 md:mt-2 flex flex-col">
 
             {/* AVATAR ROW */}
             <div className="flex items-center mb-4">
@@ -44,7 +44,7 @@ function Hero() {
               1000+ Happy Clients
             </p>
 
-            <p className="text-body mt-3 max-w-sm xl:max-w-md">
+            <p className="text-body mt-3 max-w-sm xl:max-w-md 2xl:max-w-[90%]">
               We craft bespoke living environments for those who understand that a home is the truest expression of who you are. Serving discerning clientele across Lahore and beyond.
             </p>
 

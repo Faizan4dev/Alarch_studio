@@ -62,7 +62,7 @@
   line-height: 1.6;
   letter-spacing: 0;
 
-  font-size: clamp(14px, 1.1vw, 28px);
+  font-size: clamp(14px, 1.3vw, 32px);
 }
 
 /* ============================= */
