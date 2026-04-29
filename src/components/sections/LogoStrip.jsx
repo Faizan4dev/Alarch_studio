@@ -25,12 +25,12 @@ function LogoStrip() {
           {[...logos, ...logos].map((logo, index) => (
             <div
               key={index}
-              className="flex items-center justify-center px-8 md:px-12 xl:px-16"
+              className="flex items-center justify-center px-8 md:px-12 xl:px-24"
             >
               <img
                 src={logo}
                 alt="logo"
-                className="h-8 md:h-10 xl:h-12 object-contain grayscale opacity-60 transition duration-300 hover:opacity-100"
+                className="h-8 md:h-14 2xl:h-20 object-contain grayscale opacity-60 transition duration-300 hover:opacity-100"
               />
             </div>
           ))}

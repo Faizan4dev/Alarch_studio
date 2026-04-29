@@ -16,11 +16,11 @@
 }
 
 /* ============================= */
-/* CONTAINER SYSTEM */
+/* 🔥 CONTAINER SYSTEM */
 /* ============================= */
 
 .container-main {
-  @apply w-full mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 2xl:px-24;
+  @apply w-full mx-auto px-6 md:px-10 xl:px-16 2xl:px-32;
   max-width: 100%;
 }
 
@@ -29,54 +29,74 @@
 }
 
 /* ============================= */
-/* TYPOGRAPHY SYSTEM */
+/* 🔥 TYPOGRAPHY SYSTEM */
 /* ============================= */
 
-/* Hero Heading (H1) */
+/* HERO HEADING */
 .heading-hero {
-  @apply text-4xl sm:text-5xl md:text-6xl xl:text-7xl 2xl:text-[104px]
-         leading-tight 2xl:leading-[120px]
-         font-[700] italic font-['Cormorant_Garamond'] tracking-tight;
-}
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 1.05;
+  /* letter-spacing: -0.015em; */
 
-/* Section Heading (H2/H3) */
+  font-size: clamp(64px, 8vw, 180px);
+}
+/* SECTION HEADING */
 .heading-section {
-  @apply text-2xl md:text-4xl xl:text-5xl 2xl:text-[64px]
-         font-['Cormorant_Garamond'] tracking-tight;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 1; /* matches 100% */
+  letter-spacing: 0;
+
+  font-size: clamp(32px, 4.5vw, 100px);
 }
 
-/* Body Text */
+
+
+/* BODY TEXT */
 .text-body {
-  @apply text-sm md:text-base text-black leading-relaxed font-['DM_Sans'];
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0;
+
+  font-size: clamp(14px, 1.1vw, 28px);
 }
 
 /* ============================= */
-/* BUTTON SYSTEM */
+/* 🔥 BUTTON SYSTEM */
 /* ============================= */
 
 .btn-primary {
-  @apply bg-black text-white 
-         px-5 py-2 md:px-6 md:py-3 
-         rounded-full text-sm md:text-base 
-         transition-all duration-300 
-         hover:opacity-90 hover:scale-[1.03] 
-         active:scale-95;
+  @apply bg-black text-white rounded-full
+         px-5 py-2 text-sm
+         md:px-6 md:py-3 md:text-sm
+         xl:px-7 xl:py-3 xl:text-base
+         2xl:px-8 2xl:py-4 2xl:text-lg
+         transition-all duration-300;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
 }
 
 .btn-outline {
   @apply border border-gray-400 
          px-5 py-2 md:px-6 md:py-3 
          rounded-full text-sm md:text-base 
-         transition-all duration-300 
-         hover:bg-black hover:text-white hover:border-black 
-         active:scale-95;
+         transition-all duration-300;
 }
-.btn-primary:hover {
-  transform: translateY(-1px);
+
+.btn-outline:hover {
+  @apply bg-black text-white border-black;
+  transform: translateY(-2px);
 }
 
 /* ============================= */
-/* IMAGE / CARD INTERACTIONS */
+/* 🔥 IMAGE / CARD INTERACTIONS */
 /* ============================= */
 
 .img-hover {
@@ -101,7 +121,7 @@
   @apply shadow-lg;
 }
 
-/* Icon hover (keep subtle) */
+/* Icon hover */
 .icon-hover {
   @apply transition duration-200;
 }
@@ -112,7 +132,36 @@
 }
 
 /* ============================= */
-/* LOGO STRIP ANIMATION */
+/* 🔥 AVATAR SYSTEM */
+/* ============================= */
+
+.avatar {
+  @apply w-8 h-8 md:w-9 md:h-9 xl:w-10 xl:h-10 2xl:w-12 2xl:h-12 
+         rounded-full object-cover border-2 border-white;
+}
+
+/* ============================= */
+/* 🔥 HERO TITLE WIDTH CONTROL */
+/* ============================= */
+
+.hero-title {
+  max-width: 600px;
+}
+
+@media (min-width: 1280px) {
+  .hero-title {
+    max-width: 750px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .hero-title {
+    max-width: 900px;
+  }
+}
+
+/* ============================= */
+/* 🔥 LOGO STRIP ANIMATION */
 /* ============================= */
 
 @keyframes marquee {
@@ -130,7 +179,7 @@
 }
 
 /* ============================= */
-/* IMAGE STRIP ANIMATION */
+/* 🔥 IMAGE STRIP ANIMATION */
 /* ============================= */
 
 @keyframes marqueeImages {
@@ -147,7 +196,6 @@
   display: flex;
 }
 
-/* pause on hover */
 .animate-marquee-images:hover {
   animation-play-state: paused;
 }

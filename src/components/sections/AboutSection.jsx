@@ -70,20 +70,26 @@ function AboutSection() {
       <div className="container-main">
 
         {/* 🔥 TOP ROW */}
-        <div className="flex flex-col md:flex-row justify-between gap-10 xl:gap-14">
+        <div className="flex flex-col md:flex-row justify-between gap-5 md:gap-7">
 
           {/* LEFT */}
-          <h2 className="heading-section italic font-[700] md:w-[45%] max-w-[600px]">
+          <h2 className="heading-section max-w-[600px] xl:max-w-[700px] 2xl:max-w-[60%]">
             About Alarach Studio
           </h2>
 
           {/* RIGHT */}
-          <div className="md:w-[45%] xl:w-[40%]">
-            <p className="text-body">
-              Alarc Studio is a design practice focused on creating spaces that feel as thoughtful as they look. Rooted in deep listening, we transform each client's lifestyle and vision into quietly refined environments—where every detail is intentional. From private residences to large-scale commercial projects, our work blends craftsmanship, longevity, and a subtle, lasting sense of beauty.
+          <div className="max-w-[420px] xl:max-w-[500px] 2xl:max-w-[50%]">
+
+            <p className="text-body text-gray-600">
+              Alarach Studio is a design practice focused on creating spaces that feel
+              as thoughtful as they look. Rooted in deep listening, we transform each
+              client’s lifestyle and vision into quietly refined environments—where
+              every detail is intentional. From private residences to large-scale
+              commercial projects, our work blends craftsmanship, longevity, and a
+              subtle, lasting sense of beauty.
             </p>
 
-            <div className="mt-6 flex flex-wrap gap-4">
+            <div className="flex gap-4 mt-6">
               <button className="btn-primary">
                 Book a Consultation
               </button>
@@ -92,23 +98,22 @@ function AboutSection() {
                 About Us
               </button>
             </div>
+
           </div>
 
         </div>
 
         {/* 🔥 IMAGE ROW */}
-        <div className="mt-12 md:mt-16 flex flex-col md:flex-row gap-6">
+        <div className="mt-16 flex flex-col md:flex-row gap-6">
 
-          <div className="w-full md:w-[34%] h-[240px] sm:h-[300px] md:h-[360px] xl:h-[420px] rounded-2xl">
-            <div className="img-hover w-full h-full rounded-2xl">
-              <img src={img1} alt="" />
-            </div>
+          {/* LEFT IMAGE */}
+          <div className="img-hover md:w-[36%] h-[280px] md:h-[360px] xl:h-[400px] 2xl:h-[650px] rounded-2xl overflow-hidden">
+            <img src={img1} className="w-full h-full object-cover" alt="" />
           </div>
 
-          <div className="w-full md:w-[66%] h-[240px] sm:h-[300px] md:h-[360px] xl:h-[420px] rounded-2xl">
-            <div className="img-hover w-full h-full rounded-2xl">
-              <img src={img2} alt="" />
-            </div>
+          {/* RIGHT IMAGE */}
+          <div className="img-hover md:w-[64%] h-[280px] md:h-[360px] xl:h-[400px] 2xl:h-[650px] rounded-2xl overflow-hidden">
+            <img src={img2} className="w-full h-full object-cover" alt="" />
           </div>
 
         </div>

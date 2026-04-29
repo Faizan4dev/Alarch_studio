@@ -1,93 +1,111 @@
-import titleImg from "../../assets/about-title.png";
-import img1 from "../../assets/part2.jpeg";
-import img2 from "../../assets/hero.jpeg";
-import img3 from "../../assets/part2.jpeg";
-import img4 from "../../assets/hero.jpeg";
-import img5 from "../../assets/part2.jpeg";
+import img1 from "../../assets/img1.jpeg";
+import img2 from "../../assets/img2.jpeg";
 
-const images = [img1, img2, img3, img4, img5];
-
-function AboutHero() {
+function AboutSection() {
   return (
-    <div className="w-full bg-white">
+    <div className="bg-white py-20">
 
-      {/* 🔥 TITLE */}
-      <div className="flex justify-center pt-12 pb-6">
-        <img
-          src={titleImg}
-          alt="Alarach Studio"
-          className="w-[260px] sm:w-[420px] md:w-[720px] xl:w-[1080px] 2xl:w-[1200px]"
-        />
-      </div>
+      <div className="container-main">
 
-      {/* 🔥 IMAGE STRIP */}
-      <div className="pb-12">
-
-        <div className="relative overflow-hidden h-[260px] md:h-[300px] xl:h-[340px]">
-
-          <div className="flex w-max animate-marquee-images gap-5 items-center h-full">
-            {[...images, ...images].map((img, i) => (
-              <img
-                key={i}
-                src={img}
-                alt="about"
-                className="h-[200px] md:h-[260px] xl:h-[300px] 
-                           w-[280px] md:w-[420px] xl:w-[520px] 
-                           object-cover rounded-[35px]"
-              />
-            ))}
-          </div>
-
-        </div>
-
-      </div>
-
-      {/* 🔥 ABOUT SECTION */}
-      <div className="container-main py-12 md:py-16 xl:py-20">
-
-        <div className="grid md:grid-cols-[1fr_80px_1fr] xl:grid-cols-[1fr_120px_1fr] items-start">
+        {/* 🔥 TOP ROW */}
+        <div className="flex flex-col md:flex-row justify-between gap-5 md:gap-7">
 
           {/* LEFT */}
-          <h2
-            className="
-              italic font-['Cormorant_Garamond']
-              font-[700]
-              text-[42px] sm:text-[56px] md:text-[64px] xl:text-[88px] 2xl:text-[104px]
-              leading-[0.95]
-              tracking-tight
-              max-w-[600px] xl:max-w-[700px]
-            "
-          >
-            About Alarach<br />
-            Studio
+          <h2 className="heading-section max-w-[600px] xl:max-w-[700px] 2xl:max-w-[60%]">
+            About Alarach Studio
           </h2>
 
-          {/* GAP */}
-          <div className="hidden md:block"></div>
-
           {/* RIGHT */}
-          <div className="max-w-[420px] xl:max-w-[500px] mt-6 md:mt-8">
+          <div className="max-w-[420px] xl:max-w-[500px] 2xl:max-w-[50%]">
 
-            <p className="text-sm md:text-base text-gray-600 leading-relaxed">
-              Alarach Studio — where architecture meets intention. We design
-              spaces that don't just look exceptional but shape how people feel,
-              move, and decide. Every detail is crafted to elevate perception,
-              increase desirability, and turn spaces into experiences people trust,
-              choose, and invest in.
+            <p className="text-body text-gray-600">
+              Alarach Studio is a design practice focused on creating spaces that feel
+              as thoughtful as they look. Rooted in deep listening, we transform each
+              client’s lifestyle and vision into quietly refined environments—where
+              every detail is intentional. From private residences to large-scale
+              commercial projects, our work blends craftsmanship, longevity, and a
+              subtle, lasting sense of beauty.
             </p>
 
-            <button className="mt-6 btn-primary">
-              Book a Consultation
-            </button>
+            <div className="flex gap-4 mt-6">
+              <button className="btn-primary">
+                Book a Consultation
+              </button>
+
+              <button className="btn-outline">
+                About Us
+              </button>
+            </div>
 
           </div>
 
         </div>
 
-      </div>
+        {/* 🔥 IMAGE ROW */}
+        <div className="mt-16 flex flex-col md:flex-row gap-6">
 
+          {/* LEFT IMAGE */}
+          <div className="md:w-[36%] h-[280px] md:h-[360px] xl:h-[400px] 2xl:h-[600px] rounded-2xl overflow-hidden">
+            <img src={img1} className="w-full h-full object-cover" alt="" />
+          </div>
+
+          {/* RIGHT IMAGE */}
+          <div className="md:w-[64%] h-[280px] md:h-[360px] xl:h-[400px] 2xl:h-[600px] rounded-2xl overflow-hidden">
+            <img src={img2} className="w-full h-full object-cover" alt="" />
+          </div>
+
+        </div>
+
+        {/* 🔥 STATS */}
+        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 text-center border-t pt-10">
+
+          <div className="relative">
+            <h3 className="text-3xl md:text-4xl xl:text-5xl font-serif italic">
+              500+
+            </h3>
+            <p className="text-sm text-gray-500 mt-2">
+              Projects Delivered
+            </p>
+
+            <span className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 h-10 w-px bg-gray-300"></span>
+          </div>
+
+          <div className="relative">
+            <h3 className="text-3xl md:text-4xl xl:text-5xl font-serif italic">
+              73%
+            </h3>
+            <p className="text-sm text-gray-500 mt-2">
+              Repeat Clients
+            </p>
+
+            <span className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 h-10 w-px bg-gray-300"></span>
+          </div>
+
+          <div className="relative">
+            <h3 className="text-3xl md:text-4xl xl:text-5xl font-serif italic">
+              08
+            </h3>
+            <p className="text-sm text-gray-500 mt-2">
+              Ongoing Projects
+            </p>
+
+            <span className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 h-10 w-px bg-gray-300"></span>
+          </div>
+
+          <div>
+            <h3 className="text-3xl md:text-4xl xl:text-5xl font-serif italic">
+              100%
+            </h3>
+            <p className="text-sm text-gray-500 mt-2">
+              Client Satisfaction
+            </p>
+          </div>
+
+        </div>
+
+      </div>
     </div>
   );
 }
 
-export default AboutHero;
+export default AboutSection;
