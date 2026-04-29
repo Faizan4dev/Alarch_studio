@@ -4,6 +4,7 @@ import LogoStrip from "../components/sections/LogoStrip";
 import WhySection from "../components/sections/WhySection";
 import QualitySection from "../components/sections/QualitySection";
 import ServicesSection from "../components/sections/ServicesSection";
+import FAQSection from "../components/sections/FAQSection";
 import TestimonialSection from "../components/sections/TestimonialSection";
 import CTA from "../components/ui/CTA";
 import Footer from "../components/ui/Footer";
@@ -17,6 +18,7 @@ function Home() {
       <WhySection />
       <QualitySection />
       <ServicesSection />
+      <FAQSection />
       <TestimonialSection />
       <CTA />
       <Footer />

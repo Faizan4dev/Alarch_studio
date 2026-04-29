@@ -1,17 +1,12 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useState } from "react";
 import alarch from "../../assets/alarch.png";
 
 function Navbar() {
-  const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const linkStyle = (path) =>
-    `block py-2 transition ${
-      location.pathname === path
-        ? "text-black font-medium"
-        : "text-gray-600 hover:text-black"
-    }`;
+  const linkStyle =
+    "block py-2 px-3 rounded-md transition-all duration-200 text-gray-600 hover:text-black hover:bg-gray-100/70";
 
   return (
     <div className="w-full">
@@ -20,15 +15,12 @@ function Navbar() {
       <div className="bg-black text-white">
         <div className="container-main py-2 flex items-center justify-between">
 
-          {/* LEFT (empty for balance on large screens) */}
           <div className="hidden md:block w-24"></div>
 
-          {/* CENTER TEXT */}
           <p className="text-xs md:text-sm text-center flex-1">
             DM us now at WhatsApp <b>+44 7378 261 463</b>
           </p>
 
-          {/* RIGHT ICONS */}
           <div className="flex gap-4 items-center">
             <i className="fab fa-tiktok text-sm md:text-base cursor-pointer hover:opacity-70"></i>
             <i className="fab fa-instagram text-sm md:text-base cursor-pointer hover:opacity-70"></i>
@@ -42,7 +34,7 @@ function Navbar() {
         <div className="container-main py-4 flex items-center justify-between">
 
           {/* LOGO */}
-          <Link to="/" className="flex items-center">
+          <Link to="/home" className="flex items-center">
             <img
               src={alarch}
               alt="Alarach Studio"
@@ -51,14 +43,27 @@ function Navbar() {
           </Link>
 
           {/* DESKTOP LINKS */}
-          <div className="hidden md:flex space-x-10 text-body">
-            <Link to="/" className={linkStyle("/")}>Home</Link>
-            <Link to="/projects" className={linkStyle("/projects")}>Projects</Link>
-            <Link to="/about" className={linkStyle("/about")}>About Us</Link>
-            <Link to="/contact" className={linkStyle("/contact")}>Contact Us</Link>
+          <div className="hidden md:flex space-x-4 text-body">
+
+            <Link to="/home" className={linkStyle}>
+              Home
+            </Link>
+
+            <Link to="/projects" className={linkStyle}>
+              Projects
+            </Link>
+
+            <Link to="/about" className={linkStyle}>
+              About Us
+            </Link>
+
+            <Link to="/contact" className={linkStyle}>
+              Contact Us
+            </Link>
+
           </div>
 
-          {/* CTA (desktop only) */}
+          {/* CTA */}
           <button className="hidden md:block btn-primary">
             Book a Consultation
           </button>
@@ -76,25 +81,24 @@ function Navbar() {
         {/* 🔽 MOBILE MENU */}
         {menuOpen && (
           <div className="md:hidden border-t">
-            <div className="container-main py-4 flex flex-col">
+            <div className="container-main py-4 flex flex-col gap-2">
 
-              <Link to="/" className={linkStyle("/")} onClick={() => setMenuOpen(false)}>
+              <Link to="/home" className={linkStyle} onClick={() => setMenuOpen(false)}>
                 Home
               </Link>
 
-              <Link to="/projects" className={linkStyle("/projects")} onClick={() => setMenuOpen(false)}>
+              <Link to="/projects" className={linkStyle} onClick={() => setMenuOpen(false)}>
                 Projects
               </Link>
 
-              <Link to="/about" className={linkStyle("/about")} onClick={() => setMenuOpen(false)}>
+              <Link to="/about" className={linkStyle} onClick={() => setMenuOpen(false)}>
                 About Us
               </Link>
 
-              <Link to="/contact" className={linkStyle("/contact")} onClick={() => setMenuOpen(false)}>
+              <Link to="/contact" className={linkStyle} onClick={() => setMenuOpen(false)}>
                 Contact Us
               </Link>
 
-              {/* CTA */}
               <button className="mt-4 w-full btn-primary">
                 Book a Consultation
               </button>
