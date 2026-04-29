@@ -74,14 +74,14 @@ function AboutSection() {
 
           {/* LEFT */}
           <h2 className="heading-section max-w-[600px] xl:max-w-[700px] 2xl:max-w-[60%]">
-            About Alarach Studio
+            About Alarch Studio
           </h2>
 
           {/* RIGHT */}
           <div className="max-w-[420px] xl:max-w-[500px] 2xl:max-w-[50%]">
 
             <p className="text-body text-gray-600">
-              Alarach Studio is a design practice focused on creating spaces that feel
+              Alarch Studio is a design practice focused on creating spaces that feel
               as thoughtful as they look. Rooted in deep listening, we transform each
               client’s lifestyle and vision into quietly refined environments—where
               every detail is intentional. From private residences to large-scale

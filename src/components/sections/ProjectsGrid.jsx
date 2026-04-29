@@ -1,73 +1,92 @@
-import img1 from "../../assets/hero.jpeg";
-import img2 from "../../assets/part2.jpeg";
-import img3 from "../../assets/hero.jpeg";
-import img4 from "../../assets/part2.jpeg";
-import img5 from "../../assets/hero.jpeg";
-import img6 from "../../assets/part2.jpeg";
+import img1 from "../../assets/img1.jpeg";
+import img2 from "../../assets/img2.jpeg";
+import why from "../../assets/why.jpeg";
+import img3 from "../../assets/img3.jpeg";
+import img4 from "../../assets/img4.jpeg";
+import img5 from "../../assets/img1.jpeg";
 
-const projects = [img1, img2, img3, img4, img5, img6];
+const projects = [
+  { img: img1, title: "Master Bedroom Retreat", desc: "Residential · DHA Lahore" },
+  { img: img2, title: "Living Room Design", desc: "Residential · Gulberg Lahore" },
+  { img: why, title: "Modern Kitchen Studio", desc: "Commercial · Karachi" },
+  { img: img3, title: "Executive Office Suite", desc: "Commercial · Islamabad" },
+  { img: img4, title: "Luxury Bath Sanctuary", desc: "Residential · Bahria Town" },
+  { img: img5, title: "Rooftop Lounge Area", desc: "Commercial · DHA Karachi" },
+];
 
-function ProjectsGrid() {
+function QualitySection() {
   return (
-    <div className="w-full bg-[#f5f5f5] py-16 md:py-20 xl:py-24">
+    <div className="bg-white py-16 md:py-20 xl:py-24 2xl:py-28">
 
       <div className="container-main">
 
-        {/* 🔥 TITLE */}
-        <div className="text-center max-w-2xl mx-auto mb-12 md:mb-14">
-
+        {/* HEADER */}
+        <div className="text-center w-full mx-auto">
           <h2 className="heading-section italic">
             The Quality We Provide
           </h2>
 
-          <p className="text-body mt-3 text-gray-700">
+          <p className="text-body mt-3">
             You deserve a home as beautiful as you vision it. Let's make it happen together.
           </p>
-
         </div>
 
-        {/* 🔥 GRID */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        {/* GRID */}
+        <div className="mt-12 md:mt-14 xl:mt-16">
 
-          {projects.map((img, i) => (
-            <div
-              key={i}
-              className="relative rounded-2xl overflow-hidden group"
-            >
+          <div className="
+            grid 
+            grid-cols-1 sm:grid-cols-2 md:grid-cols-3
+            gap-6 xl:gap-8 2xl:gap-10
+          ">
 
-              {/* IMAGE */}
-              <div className="h-[220px] sm:h-[240px] md:h-[260px] xl:h-[300px]">
-                <img
-                  src={img}
-                  alt="project"
-                  className="w-full h-full object-cover transition duration-500 group-hover:scale-105"
-                />
-              </div>
+            {projects.map((item, index) => (
+              <div
+                key={index}
+                className="relative rounded-2xl 2xl:rounded-[28px] overflow-hidden group"
+              >
 
-              {/* 🔥 OVERLAY (always visible slightly, stronger on hover) */}
-              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition duration-300 flex items-end p-4">
+                {/* IMAGE */}
+                <div className="
+                  h-[240px]
+                  sm:h-[260px]
+                  md:h-[280px]
+                  xl:h-[320px]
+                  2xl:h-[640px]
+                ">
+                  <img
+                    src={item.img}
+                    alt={item.title}
+                    className="w-full h-full object-cover rounded-2xl  transition duration-500 group-hover:scale-105"
+                  />
+                </div>
 
-                <div className="text-white">
+                {/* OVERLAY */}
+                <div className="absolute inset-0 rounded-2xl bg-black/30 flex flex-col justify-end p-5 xl:p-6 2xl:p-7">
 
-                  <p className="text-sm md:text-base font-['Cormorant_Garamond'] italic">
-                    Project Title
-                  </p>
+                  <h3 className="
+                    text-white
+                    text-base md:text-lg xl:text-xl 2xl:text-2xl
+                    font-['Cormorant_Garamond'] italic
+                  ">
+                    {item.title}
+                  </h3>
 
-                  <p className="text-xs text-gray-200">
-                    Category · Location
+                  <p className="text-xs xl:text-sm 2xl:text-base text-gray-200">
+                    {item.desc}
                   </p>
 
                 </div>
 
               </div>
+            ))}
 
-            </div>
-          ))}
+          </div>
 
         </div>
 
-        {/* 🔥 BUTTONS */}
-        <div className="flex flex-wrap justify-center gap-4 mt-10 md:mt-12">
+        {/* BUTTONS */}
+        <div className="mt-10 md:mt-12 xl:mt-14 flex flex-wrap justify-center gap-4">
 
           <button className="btn-primary">
             Load more...
@@ -84,4 +103,4 @@ function ProjectsGrid() {
   );
 }
 
-export default ProjectsGrid;
+export default QualitySection;

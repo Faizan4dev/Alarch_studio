@@ -51,7 +51,7 @@ function ServicesSection() {
       <div className="container-main">
 
         {/* 🔥 HEADER */}
-        <div className="text-center max-w-2xl mx-auto">
+        <div className="text-center max-w-full mx-auto">
 
           <h2 className="heading-section italic">
             What We Do For You
@@ -69,7 +69,7 @@ function ServicesSection() {
           {services.map((item, index) => (
             <div
               key={index}
-              className="bg-white border border-gray-200 rounded-2xl p-4 flex flex-col card-hover"
+              className="bg-white border border-gray-200 rounded-2xl 2xl:rounded-[28px]  p-6 xl:p-7 2xl:p-8  flex flex-col card-hover"
             >
 
               {/* IMAGE TOP */}
@@ -78,7 +78,7 @@ function ServicesSection() {
                   <img
                     src={item.img}
                     alt={item.title}
-                    className="w-full h-[220px] sm:h-[240px] md:h-[260px] object-cover transition duration-500 hover:scale-105"
+                    className="w-full h-[220px] sm:h-[240px] md:h-[260px] xl:h-[240px] 2xl:h-[380px] rounded-2xl object-cover transition duration-500 hover:scale-105"
                   />
                 </div>
               )}
@@ -86,7 +86,7 @@ function ServicesSection() {
               {/* CONTENT */}
               <div className={`${item.reverse ? "mb-4" : "mt-4"}`}>
 
-                <h3 className="text-base md:text-lg font-['Cormorant_Garamond'] italic leading-tight">
+                <h3 className="text-base md:text-lg xl:text-xl 2xl:text-[40px] font-['Cormorant_Garamond'] italic leading-tight">
                   {item.title}
                 </h3>
 
@@ -102,7 +102,7 @@ function ServicesSection() {
                   <img
                     src={item.img}
                     alt={item.title}
-                    className="w-full h-[220px] sm:h-[240px] md:h-[260px] object-cover transition duration-500 hover:scale-105"
+                    className="w-full h-[220px] sm:h-[240px] md:h-[260px] xl:h-[240px] 2xl:h-[380px] rounded-2xl object-cover transition duration-500 hover:scale-105"
                   />
                 </div>
               )}

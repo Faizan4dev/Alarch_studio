@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
-import alarch1 from "../../assets/alarch1.png";
+import alarch from "../../assets/alarch.png";
 
 function Navbar() {
   const location = useLocation();
@@ -44,7 +44,7 @@ function Navbar() {
           {/* LOGO */}
           <Link to="/" className="flex items-center">
             <img
-              src={alarch1}
+              src={alarch}
               alt="Alarach Studio"
               className="h-8 md:h-10 object-contain"
             />

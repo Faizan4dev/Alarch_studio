@@ -22,7 +22,7 @@ function WhySection() {
               </p>
 
               <p>
-                Every project at Alarc begins with understanding you. How you live, what brings you ease, what reflects your story. That insight is what separates considered design from simple decoration.
+                Every project at Alarch begins with understanding you. How you live, what brings you ease, what reflects your story. That insight is what separates considered design from simple decoration.
               </p>
 
               <p>

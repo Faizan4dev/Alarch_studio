@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import alarch from "../../assets/alarch.png";
+import alarch1 from "../../assets/alarch1.png";
 
 function Footer() {
   return (
@@ -42,7 +42,7 @@ function Footer() {
           <div className="flex flex-col items-center">
 
             <img
-              src={alarch}
+              src={alarch1}
               alt="logo"
               className="w-[160px] md:w-[190px] xl:w-[215px] h-auto mb-5 brightness-0 invert"
             />

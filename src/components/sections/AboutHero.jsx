@@ -57,3 +57,31 @@ function AboutHero() {
 }
 
 export default AboutHero;
+
+
+
+
+
+
+// 
+// import prsn6 from "../../assets/prsn6.jpg";
+// import prsn7 from "../../assets/prsn7.jpg";
+// import prsn8 from "../../assets/prsn8.png";
+// import prsn9 from "../../assets/prsn9.png";
+// import prsn10 from "../../assets/prsn10.png";
+// import prsn11 from "../../assets/prsn11.png";
+// import prsn12 from "../../assets/prsn12.png";
+// import prsn13 from "../../assets/prsn13.jpg";
+// import prsn14 from "../../assets/prsn14.png";
+// import prsn15 from "../../assets/prsn14.png";
+
+// import flagSK from "../../assets/flagSW.png";
+// import flagUS from "../../assets/flagUK.png";
+// import flagSK from "../../assets/flagSW.png";
+// import flagUS from "../../assets/flagUK.png";
+// import flagSK from "../../assets/flagSW.png";
+// import flagUS from "../../assets/flagUK.png";
+// import flagSK from "../../assets/flagSW.png";
+// import flagUS from "../../assets/flagUK.png";
+// import flagSK from "../../assets/flagSW.png";
+// import flagUS from "../../assets/flagUK.png";
