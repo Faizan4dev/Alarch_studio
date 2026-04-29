@@ -120,7 +120,7 @@ function TestimonialSection() {
                     <img
                       src={item.img}
                       alt={item.name}
-                      className="w-12 h-12 rounded-full object-cover border border-gray-200"
+                      className="avatr w-12 h-12 rounded-full object-cover border border-gray-200"
                     />
 
                     <p className="mt-3 font-['Cormorant_Garamond'] italic text-lg">
