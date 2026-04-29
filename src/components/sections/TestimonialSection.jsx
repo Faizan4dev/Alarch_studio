@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 import prsn66 from "../../assets/prsn6.jpeg";
 import prsn6 from "../../assets/prsn6.jpg";
@@ -26,8 +26,8 @@ const testimonials = [
   { text: "I appreciate Sumair Design Studio's attentiveness, professionalism, and effective communication. They managed to bring my idea to fruition...", name: "Dreamattic", img: prsn66, flag: flagSK, country: "Slovakia" },
   { text: "Amazing work!! fast communication!! so wonderful to work with them ...", name: "Roger Francis", img: prsn7, flag: flagUS, country: "United States" },
   { text: "Thank you! It was great working with you. Will be in touch again.", name: "Morganesort", img: prsn8, flag: flagSM, country: "Sint Maarten" },
-  { text: "Sumair Design Studio’s done a amazing job on our project with incredible attention to details and outstanding visual appeal.", name: "Jalicia", img: prsn9, flag: flagUS, country: "United States" },
-  { text: "Thrilled with Sumair Design Studio’s work! Highly recommend for 3D interior modeling projects!", name: "Cazpey", img: prsn10, flag: flagGR, country: "Germany" },
+  { text: "Sumair Design Studio's done a amazing job on our project with incredible attention to details and outstanding visual appeal.", name: "Jalicia", img: prsn9, flag: flagUS, country: "United States" },
+  { text: "Thrilled with Sumair Design Studio's work! Highly recommend for 3D interior modeling projects!", name: "Cazpey", img: prsn10, flag: flagGR, country: "Germany" },
   { text: "Amazing job with incredible attention to detail and outstanding visual appeal.", name: "Ehabbarazi", img: prsn11, flag: flagUK, country: "United Kingdom" },
   { text: "They understood my vision perfectly and delivered beyond expectations.", name: "El Muntasir", img: prsn12, flag: flagSA, country: "Saudi Arabia" },
   { text: "Very satisfied with the work! Fast implementation and great communication.", name: "Leolaina", img: prsn13, flag: flagSW, country: "Switzerland" },
@@ -35,19 +35,43 @@ const testimonials = [
   { text: "Très patient et professionnel. Je recommande vivement.", name: "Miyiger", img: prsn6, flag: flagFR, country: "France" },
 ];
 
+// Show 3 cards at a time on md+, so total pages = testimonials.length - 2
+const VISIBLE = 3;
+const TOTAL_PAGES = testimonials.length - VISIBLE + 1; // 8 page steps
+
 function TestimonialSection() {
   const scrollRef = useRef(null);
+  const [activeIndex, setActiveIndex] = useState(0);
 
   const scroll = (dir) => {
     const container = scrollRef.current;
     const card = container.firstChild;
+    const cardWidth = card.offsetWidth + 32; // gap-8 = 32px
 
-    const cardWidth = card.offsetWidth + 32; // gap-8
+    const nextIndex =
+      dir === "left"
+        ? Math.max(0, activeIndex - 1)
+        : Math.min(TOTAL_PAGES - 1, activeIndex + 1);
 
     container.scrollBy({
       left: dir === "left" ? -cardWidth : cardWidth,
       behavior: "smooth",
     });
+
+    setActiveIndex(nextIndex);
+  };
+
+  const scrollToIndex = (index) => {
+    const container = scrollRef.current;
+    const card = container.firstChild;
+    const cardWidth = card.offsetWidth + 32;
+
+    container.scrollTo({
+      left: cardWidth * index,
+      behavior: "smooth",
+    });
+
+    setActiveIndex(index);
   };
 
   return (
@@ -76,7 +100,6 @@ function TestimonialSection() {
             ref={scrollRef}
             className="flex gap-8 overflow-x-auto no-scrollbar scroll-smooth w-full"
           >
-
             {testimonials.map((item, index) => (
               <div
                 key={index}
@@ -86,7 +109,7 @@ function TestimonialSection() {
                 {/* CARD */}
                 <div className="h-full flex flex-col justify-between text-center px-4">
 
-                  {/* TEXT (fixed height for alignment) */}
+                  {/* TEXT */}
                   <p className="text-body min-h-[110px]">
                     "{item.text}"
                   </p>
@@ -121,7 +144,6 @@ function TestimonialSection() {
 
               </div>
             ))}
-
           </div>
 
           {/* RIGHT ARROW */}
@@ -136,10 +158,15 @@ function TestimonialSection() {
 
         {/* DOTS */}
         <div className="mt-8 md:mt-10 flex justify-center gap-2">
-          <div className="w-2 h-2 bg-black rounded-full"></div>
-          <div className="w-2 h-2 bg-gray-300 rounded-full"></div>
-          <div className="w-2 h-2 bg-gray-300 rounded-full"></div>
-          <div className="w-2 h-2 bg-gray-300 rounded-full"></div>
+          {Array.from({ length: TOTAL_PAGES }).map((_, i) => (
+            <button
+              key={i}
+              onClick={() => scrollToIndex(i)}
+              className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                i === activeIndex ? "bg-black w-4" : "bg-gray-300"
+              }`}
+            />
+          ))}
         </div>
 
       </div>

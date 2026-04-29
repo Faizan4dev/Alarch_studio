@@ -50,7 +50,7 @@ function CTA({
             </p>
 
             {/* BUTTON */}
-            <button className="mt-6 bg-white text-black px-5 py-2 md:px-6 md:py-3 rounded-full text-sm md:text-base transition duration-300 hover:bg-gray-200 active:scale-95">
+            <button className="mt-6 bg-white text-black px-5 py-2 md:px-6 md:py-3 rounded-full text-sm md:text-base transition duration-300 hover:bg-gray-300 active:scale-95">
               {buttonText}
             </button>
 
