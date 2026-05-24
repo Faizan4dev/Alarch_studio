@@ -403,9 +403,9 @@ function QualitySection({ id }) {
 
   return (
    <div
-  id={id}
-  className="bg-white py-16 md:py-20 xl:py-24 2xl:py-28"
->
+        id={id}
+        className="bg-white py-16 md:py-20 xl:py-24 2xl:py-28"
+      >
       <div className="container-main">
 
         {/* HEADER */}

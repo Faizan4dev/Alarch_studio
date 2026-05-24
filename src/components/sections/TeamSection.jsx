@@ -3,6 +3,7 @@ import { useRef } from "react";
 import img1 from "../../assets/mate1.png";
 import img2 from "../../assets/mate2.png";
 import img3 from "../../assets/mate3.png";
+import img4 from "../../assets/rubab.png"
 
 const team = [
   {
@@ -23,6 +24,15 @@ const team = [
     behance: "https://www.behance.net/alisumair",
     instagram: "https://www.instagram.com/sumair_studio?igsh=d2t1MGZ0bGpjdTBj",
   },
+   {
+    name: "Rubab Khurram",
+    role: "Architect",
+    img: img4,
+    desc: "Focuses on architectural precision and translating concepts into functional spaces.",
+    linkedin: "https://www.linkedin.com/in/ali-sumair-1444082a5/",
+    behance: "https://www.behance.net/alisumair",
+    instagram: "https://www.instagram.com/alarch_studio?igsh=MXVhZGNyNmdydDU3Zg==",
+  },
   {
     name: "Talha Manzoor",
     role: "Visual Designer",
@@ -31,15 +41,6 @@ const team = [
     linkedin: "https://www.linkedin.com/in/uiuxtalhamanzoor/",
     behance: "https://www.behance.net/talhamanzoor2",
     instagram: "https://www.instagram.com/mr.talha12?igsh=azZlNDQ2OWExajdv",
-  },
-  {
-    name: "Another Member",
-    role: "Architect",
-    img: img1,
-    desc: "Focuses on architectural precision and translating concepts into functional spaces.",
-    linkedin: "https://www.linkedin.com/in/ali-sumair-1444082a5/",
-    behance: "https://www.behance.net/alisumair",
-    instagram: "https://www.instagram.com/alarch_studio?igsh=MXVhZGNyNmdydDU3Zg==",
   },
 ];
 

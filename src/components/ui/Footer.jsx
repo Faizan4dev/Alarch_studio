@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import alarch1 from "../../assets/alarch1.png";
 
-
 function Footer() {
   return (
     <div className="w-full bg-black text-white">
@@ -19,20 +18,39 @@ function Footer() {
 
             <div className="space-y-3 text-sm md:text-base text-gray-400">
 
+              {/* LOCATION */}
               <div className="flex items-center justify-center md:justify-start gap-3">
                 <i className="fa-solid fa-location-dot"></i>
                 <span>Sanat Pura, Faisalabad</span>
               </div>
 
-              <div className="flex items-center justify-center md:justify-start gap-3">
-                <i className="fa-solid fa-phone"></i>
+              {/* PHONE / WHATSAPP */}
+              <a
+                href="https://wa.me/923326422091"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+                  flex items-center justify-center md:justify-start gap-3
+                  hover:text-white transition duration-300
+                "
+              >
+                <i className="fa-brands fa-whatsapp"></i>
                 <span>+92 332 6422091</span>
-              </div>
+              </a>
 
-              <div className="flex items-center justify-center md:justify-start gap-3">
+              {/* EMAIL */}
+              <a
+                href="mailto:contact.alarchstudio@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+                  flex items-center justify-center md:justify-start gap-3
+                  hover:text-white transition duration-300
+                "
+              >
                 <i className="fa-solid fa-envelope"></i>
                 <span>contact.alarchstudio@gmail.com</span>
-              </div>
+              </a>
 
             </div>
 
@@ -49,21 +67,23 @@ function Footer() {
 
             <div className="flex flex-wrap justify-center gap-6 text-sm md:text-base text-gray-400">
 
-              <Link to="/" className="hover:text-white transition">
+              <Link to="/" className="hover:text-white transition duration-300">
                 Home
               </Link>
 
-              <Link to="/projects" className="hover:text-white transition">
+              <Link
+                to="/projects"
+                className="hover:text-white transition duration-300"
+              >
                 Projects
               </Link>
 
-              <Link to="/about" className="hover:text-white transition">
+              <Link
+                to="/about"
+                className="hover:text-white transition duration-300"
+              >
                 About Us
               </Link>
-
-              {/* <Link  className="hover:text-white transition">
-                Contact Us
-              </Link> */}
 
             </div>
 
@@ -78,31 +98,43 @@ function Footer() {
 
             <div className="space-y-3 text-sm md:text-base text-gray-400">
 
+              {/* INSTAGRAM */}
               <a
                 href="https://www.instagram.com/alarch_studio?igsh=MXVhZGNyNmdydDU3Zg=="
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center md:justify-start gap-3 hover:text-white transition"
+                className="
+                  flex items-center justify-center md:justify-start gap-3
+                  hover:text-white transition duration-300
+                "
               >
                 <i className="fa-brands fa-instagram"></i>
                 Instagram
               </a>
 
+              {/* TIKTOK */}
               <a
                 href="https://www.tiktok.com/@alarch_studio?_r=1&_t=ZS-95ycMmIS84w"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center md:justify-start gap-3 hover:text-white transition"
+                className="
+                  flex items-center justify-center md:justify-start gap-3
+                  hover:text-white transition duration-300
+                "
               >
                 <i className="fa-brands fa-tiktok"></i>
                 TikTok
               </a>
 
+              {/* LINKEDIN */}
               <a
                 href="https://www.linkedin.com/in/ali-sumair-1444082a5/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center md:justify-start gap-3 hover:text-white transition"
+                className="
+                  flex items-center justify-center md:justify-start gap-3
+                  hover:text-white transition duration-300
+                "
               >
                 <i className="fa-brands fa-linkedin"></i>
                 LinkedIn
@@ -114,7 +146,7 @@ function Footer() {
 
         </div>
 
-        {/*FOOTER BOTTOM */}
+        {/* FOOTER BOTTOM */}
         <div className="border-t border-gray-800 mt-10 md:mt-12 pt-6 text-center text-xs md:text-sm text-gray-500">
           © Alarch Studio Inc. All Rights Reserved.
         </div>
